@@ -1,0 +1,20 @@
+{
+  "name": "road-buddy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johndwatt/Road-Buddy.git"
+  },
+  "author": "Kenny Jean, Brian Pham, Nick Arredondo, John D Watt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johndwatt/Road-Buddy/issues"
+  },
+  "homepage": "https://github.com/johndwatt/Road-Buddy#readme"
+}
