@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+main {
   background-color: steelblue;
   color: white;
   font-family: "Muli", sans-serif;
@@ -15,6 +15,10 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+.heroImage {
+  padding: 5vw;
 }
 
 .titleContainer {
@@ -82,7 +86,6 @@ body {
   width: 100%;
   padding: 15px 0;
   font-size: 18px;
-  color: #fff;
 }
 
 .form-control input:focus,
