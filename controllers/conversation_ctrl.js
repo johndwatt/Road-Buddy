@@ -70,7 +70,7 @@ const newMessagePost = async function (req, res, next) {
         receiver = await User.findById(req.params.id);
 
 
-        res.redirect(`/conversation/${foundConversation._id}`);
+        res.redirect(`/${foundConversation._id}`);
     } catch (error) {
         console.log(error);
         req.error = error;

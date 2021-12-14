@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <title>
-        Conversation with <%= otherUser.username %>
-    </title>
-
+    <head>
+        <%- include('../partials/_head') %>
+        <title>
+            Conversation with <%= otherUser.username %>
+        </title>
+    </head>
     <body>
+        <%- include('../partials/_navbar') %>
             <div>
                 <div class="messages_container">
                     <h1>

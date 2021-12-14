@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <title>
-        New Message
-    </title>
-
+    <head>
+        <%- include('../partials/_head') %>
+        <title>
+            New Message
+        </title>
+    </head>
     <body>
+        <%- include('../partials/_navbar') %>
         <div>
             <div style="height:30vh">
                 <h1 >Send a Message to <%= receiver.username %> </h1>
