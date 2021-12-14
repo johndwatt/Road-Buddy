@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>
+    Conversations
+</title>
+
+    <body>
+            <div class="main_container">
+                <div class="users_container">
+                    <% for(let i=0;i<conversations.length;i++) { %>
+                        <a href="/conversation/<%=conversations[i]._id%>">
+                            <div class="nonactive_conversation user_container py-1">
+                                <img src="<%= userConversations[i].avatar %> " alt="" srcset="" class="avatar_img">
+                                <%= userConversations[i].username %>
+                            </div>
+                        </a>
+                        <% } %>
+                </div>
+                <div class="messages_container">
+                    <h1 class="conversation_name" style="top:40%;position:relative">
+                        Select a Conversation on the left to view your messages!
+                    </h1>
+
+                </div>
+            </div>
+    </body>
+
