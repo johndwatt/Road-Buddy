@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/scripts/main.js" defer></script>
+    <title>Road Buddy</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Login to Road Buddy</h2>
+            <form action="/login" method="POST">
+                <% if (typeof error !== "undefined") { %>
+                    <p><%= error.message %></p>
+                <% } %>
+                <div>
+                    <label>Username</label>
+                    <input 
+                    type="text"
+                    name="username"
+                    placeholder="Your Username"
+                    required
+                    />
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input
+                    type="password"
+                    name="password"
+                    placeholder="************"
+                    required
+                    />
+                </div>
+                <div>
+                    <button type="submit">Log In</button>
+                </div>
+                <div>
+                    <a href="/signup">Need to create an account? Click here!</a>
+                </div>
+                
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

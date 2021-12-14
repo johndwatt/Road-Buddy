@@ -4,8 +4,8 @@ const { User } = require("../models");
 // login show
 const loginShow = async function (req, res, next) {
     try {
-        return res.send("login show works");
-        //return res.render("auth/login");
+        // return res.send("login show works");
+        return res.render("auth/login");
     } catch (error){
         console.log(error);
         req.error = error;
@@ -16,8 +16,8 @@ const loginShow = async function (req, res, next) {
 // signup show
 const signupShow = async function (req, res, next) {
     try {
-        return res.send("signup show works");
-        //return res.render("auth/signup");
+        // return res.send("signup show works");
+        return res.render("auth/signup");
     } catch (error){
         console.log(error);
         req.error = error;
