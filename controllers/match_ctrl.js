@@ -4,9 +4,19 @@ const { User } = require("../models")
 const indexRoute = async function (req, res, next) {
     try {
         context = {}
-        const randomInterestIndex = Math.floor(Math.random() * req.session.currentUser.interests.length)
+        
+        const randomInterest = req.session.currentUser.interests[Math.floor(Math.random() * req.session.currentUser.interests.length)]
+        // const foundUsers = await User.find({ interests: randomInterest }).populate("user");
+        const foundUsers = await User.find({$and: [{ interests: randomInterest},  {_id: {$ne: req.session.currentUser.id  }} ]})
+        const randomUser = foundUsers[Math.floor(Math.random() * foundUsers.length)];
+        if(foundUsers.length === 0){
+            return res.send(`no one else has interest  in ${randomInterest}`)
+        }
+        const context = {
+            randomUser: randomUser
+        }
+        return res.render()
 
-        return res.send(req.session.currentUser.interests[randomInterestIndex])
     } catch (error){
         console.log(error);
         req.error = error;
