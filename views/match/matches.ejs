@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/_head') %>
+</head>
+<body>
+    <%- include('../partials/_navbar') %>
+        <header>
+            <section>
+                <h3>Profile</h3>
+                <div>
+                    <img src="<%= thisUser.avatar %>" alt="profile-photo">
+                </div>
+                <p>You have a common interest in <%= commonInterest %> </p>
+                <p><%= thisUser.username %></p>
+                <p>Join Date: <%= thisUser.createdAt.toLocaleDateString() %> %></p>
+                <p>Interests: <%= thisUser.interests%> %></p>
+                <a href="/message/new/<%=thisUser.id%>">
+                    <div class="profile__link">
+                        Send a message
+                    </div>
+                </a>
+            </section>
+        </header>
+    
+</body>
+</html>

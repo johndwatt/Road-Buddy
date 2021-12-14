@@ -3,20 +3,26 @@ const { User } = require("../models")
 //index
 const indexRoute = async function (req, res, next) {
     try {
-        context = {}
-        
-        const randomInterest = req.session.currentUser.interests[Math.floor(Math.random() * req.session.currentUser.interests.length)]
+        const userInterests = req.session.currentUser.interests.slice()
+        // const randomInterest = req.session.currentUser.interests[Math.floor(Math.random() * req.session.currentUser.interests.length)]
         // const foundUsers = await User.find({ interests: randomInterest }).populate("user");
-        const foundUsers = await User.find({$and: [{ interests: randomInterest},  {_id: {$ne: req.session.currentUser.id  }} ]})
-        const randomUser = foundUsers[Math.floor(Math.random() * foundUsers.length)];
-        if(foundUsers.length === 0){
-            return res.send(`no one else has interest  in ${randomInterest}`)
+        // console.log(userInterests)
+        while(userInterests.length > 0){
+            const randomIndex = Math.floor(Math.random() * userInterests.length)
+            const randomInterest = userInterests.splice(randomIndex, 1)
+            const foundUsers = await User.find({$and: [{ interests: randomInterest[0]},  {_id: {$ne: req.session.currentUser.id  }} ]})
+            const randomUser = foundUsers[Math.floor(Math.random() * foundUsers.length)];
+            console.log(foundUsers)
+            if(foundUsers.length > 0){
+                const context = {
+                    thisUser: randomUser,
+                    commonInterest: randomInterest,
+                };
+                return res.render("match/matches", context)
+            };
         }
-        const context = {
-            randomUser: randomUser
-        }
-        return res.render()
 
+        return res.send(`No one else has this interest`)
     } catch (error){
         console.log(error);
         req.error = error;
