@@ -15,6 +15,22 @@ const PORT = 4000;
 app.set("view engine", "ejs");
 
 // Middleware
+app.use(
+    session({
+        store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI || "mongodb://localhost:27017/road-buddy" }),
+        secret: process.env.SECRET || "tacos",
+        resave: false,
+        saveUninitialized: false,
+        cookie: {
+            maxAge: 1000 * 60 * 60 * 24 * 7 * 2,
+        },
+    })
+);
+app.use((req, res, next) => {
+    res.locals.user = req.session.currentUser;
+    return next();
+}); 
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
@@ -22,6 +38,8 @@ app.use(require("./utils/logger"));
 
 // Routes
 app.use("/", routes.auth);
+app.use("/", routes.profile);
+app.use("/", routes.match);
 
 // Bind Server to PORT
 app.listen(PORT, () => {

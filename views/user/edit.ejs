@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/scripts/main.js" defer></script>
+    <title>Road Buddy</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Edit My User Profile</h2>
+            <form action="/profile/<%= userToEdit.id %>?_method=PUT" method="POST">
+                <% if (typeof error !== "undefined") { %>
+                    <p><%= error.message %></p> 
+                <% } %>
+                <div>
+                    <label>Username</label>
+                    <input
+                    type="text"
+                    name="username"
+                    value="<%= userToEdit.username %>"
+                    required
+                    />
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input
+                    type="email"
+                    name="email"
+                    value="<%= userToEdit.email %>"
+                    required
+                    />
+                </div>
+                <div>
+                    <label>Avatar</label>
+                    <input
+                    type="text"
+                    name="avatar"
+                    value="<%= userToEdit.avatar %>"
+                    />
+                </div>
+                <div>
+                    <label>Interests</label>
+                    <input
+                    type="text"
+                    name="interests"
+                    value="<%= userToEdit.interests %>"
+                    />
+                </div>
+                <div>
+                    <button type="submit">Confirm Edits</button>
+                    <a href="/profile/<%= userToEdit.id %>">Cancel</a>
+                </div>
+                
+            </form>
+        </section>
+    </main>
+</body>
+</html>
