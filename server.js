@@ -22,6 +22,7 @@ app.use(require("./utils/logger"));
 
 // Routes
 app.use("/", routes.auth);
+app.use("/", routes.profile);
 
 // Bind Server to PORT
 app.listen(PORT, () => {
