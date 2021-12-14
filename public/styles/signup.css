@@ -1,0 +1,35 @@
+.signupImageContainer {
+  display: grid;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.signupimage {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  height: 30vh;
+}
+
+.accountFormContainer {
+  margin: 20px;
+  padding: 10px;
+}
+
+.formInput {
+  width: 75vw;
+  height: 5vh;
+  margin-top: 20px;
+}
+
+.createAccountButton {
+  margin: 20px;
+  width: 100px;
+}
+
+.buttonContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
