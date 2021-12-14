@@ -104,6 +104,8 @@ const profileUpdate = async function (req, res, next) {
     }
 }
 
+
+
 module.exports = {
     profileRoute,
     profileEdit,
