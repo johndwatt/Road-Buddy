@@ -87,6 +87,24 @@ const signupPost = async function (req, res, next) {
     }
 }
 
+const interestSetup = async function (req,res,next) {
+    try {
+        const sports = ["Golf", "Basketball", "Football"]
+        const music = ["Rap", "Country", "Rock", "Pop"]
+        const movies = ["Action", "Comedy", "Horror"]
+        const podcasts = ["Comedy", "News"]
+        const context = {
+            categoryNames: ['Sports', "Music", "Movies", "Podcasts"],
+            categories: [sports, music, movies, podcasts]
+        }
+        return res.render("auth/interestSetup", context);
+    } catch (error){
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+}
+
 // logout
 const logoutRoute = async function (req, res, next) {
     try {
@@ -105,4 +123,5 @@ module.exports = {
     loginPost,
     signupPost,
     logoutRoute,
+    interestSetup,
 }
