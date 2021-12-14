@@ -1,7 +1,7 @@
 // External Modules
 const express = require("express");
 const methodOverride = require("method-override");
-// const routes = require("./routes");
+const routes = require("./routes");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const dotenv = require("dotenv");
@@ -21,6 +21,7 @@ app.use(methodOverride("_method"));
 app.use(require("./utils/logger"));
 
 // Routes
+app.use("/", routes.auth);
 
 // Bind Server to PORT
 app.listen(PORT, () => {
