@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <title>
+        New Message
+    </title>
+
+    <body>
+        <div>
+            <divstyle="height:30vh">
+                <h1 >Send a Message to <%= receiver.username %> </h1>
+                <form action="/conversation/message/new/<%=receiver.id%>" method="POST">
+                    <% if (typeof error !=='undefined' ) { %>
+                        <article class="message is-danger">
+                            <div class="message-header">
+                                <p>Danger</p>
+                            </div>
+                            <div class="message-body">
+                                <%= error.message %>
+                            </div>
+                        </article>
+                        <% } %>
+                            <div class="form__input mt-5" >
+                                <input maxlength="300" type="text" class="input" placeholder="Message text"
+                                    name="text" id="message_text" >
+                            </div>
+                            <div>
+                                <button class="form__button">Send Message</button>
+                            </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -39,6 +39,11 @@
                 <% if (user.id === thisUser.id) { %> 
                     <a href="/profile/<%= thisUser.id %>/edit"><button>Update profile</button></a>
                 <% } %> 
+                <a href="/conversation/message/new/<%=thisUser.id%>">
+                    <div class="profile__link">
+                        Send a message
+                    </div>
+                </a>
             </section>
         </header>
     
