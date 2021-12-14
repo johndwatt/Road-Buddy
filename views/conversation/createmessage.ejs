@@ -7,9 +7,9 @@
 
     <body>
         <div>
-            <divstyle="height:30vh">
+            <div style="height:30vh">
                 <h1 >Send a Message to <%= receiver.username %> </h1>
-                <form action="/conversation/message/new/<%=receiver.id%>" method="POST">
+                <form action="/message/new/<%=receiver.id%>" method="POST">
                     <% if (typeof error !=='undefined' ) { %>
                         <article class="message is-danger">
                             <div class="message-header">
