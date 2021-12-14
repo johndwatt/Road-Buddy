@@ -6,8 +6,8 @@
     </title>
 
     <body>
-            <div class="main_container">
-                <div class="users_container">
+            <div>
+                <div>
                     <% for(let i=0;i<conversations.length;i++) { %>
                         <a href="/conversation/<%=conversations[i]._id%>">
                             <% if (currentConversationId==conversations[i]._id) {%>
@@ -23,7 +23,7 @@
                         <% } %>
                 </div>
                 <div class="messages_container">
-                    <h1 class="conversation_name">
+                    <h1>
                         Conversation with <%= otherUser.username %>
                     </h1>
                     <% for(let i=0;i<allMessages.length;i++) { %>
@@ -49,7 +49,7 @@
                                                         <% } %>
                                             </div>
                                             <% } %>
-                                                <div class="form__container">
+                                                <div>
                                                     <form action="/conversation/message/new/<%=otherUser.id%>"
                                                         method="POST" id="form__box">
                                                         <% if (typeof error !=='undefined' ) { %>
@@ -62,13 +62,10 @@
                                                                 </div>
                                                             </article>
                                                             <% } %>
-                                                                <div class="send_message">
+                                                                <div>
                                                                     <input maxlength="300" type="text" class="input"
                                                                         placeholder="Type your message" name="text"
                                                                         id="text">
-
-
-
                                                                     <button class="message__button py-2 px-3">Send
                                                                     </button>
                                                                 </div>
