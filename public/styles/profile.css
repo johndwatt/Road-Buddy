@@ -1,0 +1,72 @@
+.imageContainer {
+  border-radius: 30px;
+  width: 100vw;
+}
+
+.profileImage {
+  border-radius: 45px;
+  padding: 40px 40px 0px 40px;
+  width: 100%;
+}
+
+.profileContents {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.iconContainer {
+  padding: 0px 5px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  padding: 5px;
+}
+
+.username {
+  font-size: 30px;
+}
+
+.footerContainer {
+  border-radius: 10px;
+}
+
+.bioContainer {
+  margin: 20px 0px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.bio {
+  width: 80vw;
+  height: 10vh;
+}
+
+.switchContainer {
+  display: grid;
+  justify-content: center;
+}
+
+#flexSwitchCheckChecked {
+  height: 40px;
+  width: 100px;
+}
+
+.editButtonContainer {
+  display: grid;
+  justify-content: center;
+}
+
+.footerContainer {
+  align-items: flex-end;
+}
+
+.footerIconsContainer {
+  display: flex;
+  margin-top: 110px;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid black;
+  padding: 10px;
+}
