@@ -1,27 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <title>
-        Conversation with <%= otherUser.username %>
-    </title>
-
+    <head>
+        <%- include('../partials/_head') %>
+        <title>
+            Conversation with <%= otherUser.username %>
+        </title>
+    </head>
     <body>
+        <%- include('../partials/_navbar') %>
             <div>
-                <div>
-                    <% for(let i=0;i<conversations.length;i++) { %>
-                        <a href="/conversation/<%=conversations[i]._id%>">
-                            <% if (currentConversationId==conversations[i]._id) {%>
-                                <div class="active_conversation user_container py-1">
-                                    <% } else { %>
-                                        <div class="nonactive_conversation user_container py-1">
-                                            <% } %>
-                                                <img src="<%= userConversations[i].avatar %> " alt="" srcset=""
-                                                    class="avatar_img">
-                                                <%= userConversations[i].username %>
-                                        </div>
-                        </a>
-                        <% } %>
-                </div>
                 <div class="messages_container">
                     <h1>
                         Conversation with <%= otherUser.username %>
@@ -30,19 +17,19 @@
                         <% if (allMessages[i].sender==currentUser.id) { %>
                             <div class="sender_message">
                                 <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %>
-                                    <a href="/users/<%= user.id %>">
+                                    <a href="/profile/<%= user.id %>">
                                         <%= currentUser.username %>
                                     </a>
                                     : <%= allMessages[i].text %>
                                         <img class="avatar_img" src="<%= currentUser.avatar %> " alt="" srcset="">
                                         <% } else {%>
                                             <div class="receiver_message">
-                                                <a href="/users/<%= otherUser.id %> ">
+                                                <a href="/profile/<%= otherUser.id %> ">
                                                     <img class="avatar_img" src="<%= otherUser.avatar %> " alt=""
                                                         srcset="">
                                                 </a>
                                                 <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %>
-                                                    <a href="/users/<%= otherUser.id %> ">
+                                                    <a href="/profile/<%= otherUser.id %> ">
                                                         <%= otherUser.username %>
                                                     </a>
                                                     : <%= allMessages[i].text %>

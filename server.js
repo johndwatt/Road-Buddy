@@ -39,7 +39,7 @@ app.use(require("./utils/logger"));
 // Routes
 app.use("/", routes.auth);
 app.use("/", routes.profile);
-app.use("/", routes.match);
+// app.use("/", routes.match);
 app.use("/", routes.conversation);
 
 // Bind Server to PORT

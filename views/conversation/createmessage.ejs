@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <title>
-        New Message
-    </title>
-
+    <head>
+        <%- include('../partials/_head') %>
+        <title>
+            New Message
+        </title>
+    </head>
     <body>
+        <%- include('../partials/_navbar') %>
         <div>
-            <divstyle="height:30vh">
+            <div style="height:30vh">
                 <h1 >Send a Message to <%= receiver.username %> </h1>
-                <form action="/conversation/message/new/<%=receiver.id%>" method="POST">
+                <form action="/message/new/<%=receiver.id%>" method="POST">
                     <% if (typeof error !=='undefined' ) { %>
                         <article class="message is-danger">
                             <div class="message-header">

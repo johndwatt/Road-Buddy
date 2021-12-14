@@ -1,0 +1,15 @@
+<div>
+    <% for(let i=0;i<conversations.length;i++) { %>
+        <a href="/conversation/<%=conversations[i]._id%>">
+            <% if (currentConversationId==conversations[i]._id) {%>
+                <div class="active_conversation user_container py-1">
+                    <% } else { %>
+                        <div class="nonactive_conversation user_container py-1">
+                            <% } %>
+                                <img src="<%= userConversations[i].avatar %> " alt="" srcset=""
+                                    class="avatar_img">
+                                <%= userConversations[i].username %>
+                        </div>
+        </a>
+        <% } %>
+</div>
