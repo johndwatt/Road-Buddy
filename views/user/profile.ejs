@@ -1,29 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <%- include('../partials/_head') %>
-</head>
-<body>
-    <%- include('../partials/_navbar') %>
-        <header>
-            <section>
-                <h3>Profile</h3>
-                <div>
-                    <img src="<%= thisUser.avatar %>" alt="profile-photo">
-                </div>
-                <p><%= thisUser.username %></p>
-                <p>Join Date: <%= thisUser.createdAt.toLocaleDateString() %> %></p>
-                <p>Interests: <%= thisUser.interests%> %></p>
-                <% if (user.id === thisUser.id) { %> 
-                    <a href="/profile/<%= thisUser.id %>/edit"><button>Update profile</button></a>
-                <% } %> 
-                <a href="/message/new/<%=thisUser.id%>">
-                    <div class="profile__link">
-                        Send a message
-                    </div>
-                </a>
-            </section>
-        </header>
-    
-</body>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles/profile.css" />
+  </head>
+  <body>
+    <header>
+      <section>
+        <div class="imageContainer">
+          <img class="profileImage" src="<%= thisUser.avatar %>" alt="" />
+        </div>
+        <div class="profileContents">
+          <div class="username">@<%= thisUser.username %></div>
+          <div class="iconContainer">
+            <i class="fas fa-phone-alt icon"></i>
+            <a href="/message/new/<%=thisUser.id%>">
+              <i class="far fa-envelope icon"></i>
+            </a>
+            <i class="far fa-comment-dots icon"></i>
+          </div>
+          <div class="buttonContainer">
+            <button
+              type="button"
+              class="btn btn-primary active"
+              data-bs-toggle="button"
+              autocomplete="off"
+              aria-pressed="true"
+            >
+              About
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              disabled
+              data-bs-toggle="button"
+              autocomplete="off"
+            >
+              Interest
+            </button>
+          </div>
+          <div class="bioContainer">
+            <p class="bio">
+              Short Bio about the user for other user to see once they've joined
+              the app
+            </p>
+          </div>
+        </div>
+        <div class="editButtonContainer">
+          <% if (user.id === thisUser.id) { %>
+          <a href="/profile/<%= thisUser.id %>/edit">
+            <button>Update profile</button></a
+          >
+          <% } %>
+        </div>
+      </section>
+    </header>
+  </body>
+  <footer>
+    <div class="footerContainer">
+      <div class="footerIconsContainer">
+        <i class="fas fa-phone-square-alt fa-2x"></i>
+        <i class="fas fa-comment-dots fa-2x"></i>
+        <i class="fas fa-truck fa-3x"></i>
+        <i class="fas fa-search fa-2x"></i>
+        <i class="fas fa-user-astronaut fa-2x"></i>
+      </div>
+    </div>
+  </footer>
 </html>
