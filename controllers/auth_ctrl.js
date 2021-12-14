@@ -33,6 +33,7 @@ const loginPost = async function (req, res, next) {
         req.session.currentUser = {
             id: foundUser._id,
             username: foundUser.username,
+            interests: foundUser.interests,
         };
         return res.redirect(`/profile/${foundUser._id}`);
     } catch (error){
@@ -70,6 +71,7 @@ const signupPost = async function (req, res, next) {
         req.session.currentUser = {
             id: newUser._id,
             username: newUser.username,
+            interests: newUser.interests,
         };
         return res.redirect(`/profile/${newUser._id}`);
     } catch (error){

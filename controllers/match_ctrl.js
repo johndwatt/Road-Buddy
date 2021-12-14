@@ -3,7 +3,10 @@ const { User } = require("../models")
 //index
 const indexRoute = async function (req, res, next) {
     try {
-        return res.send("index route showing ALL MATCHES works");
+        context = {}
+        const randomInterestIndex = Math.floor(Math.random() * req.session.currentUser.interests.length)
+
+        return res.send(req.session.currentUser.interests[randomInterestIndex])
     } catch (error){
         console.log(error);
         req.error = error;

@@ -67,6 +67,7 @@ const profileUpdate = async function (req, res, next) {
         const foundUser = await User.findById({ _id: req.params.id });
         const checkUsername = await User.exists({ username: req.body.username });
         const checkEmail = await User.exists({ email: req.body.email });
+        req.body.interests = req.body.interests.split(',');
         if (checkUsername === true && foundUser.username !== req.body.username) {
             const context = {
                 userToEdit: foundUser,
@@ -88,6 +89,13 @@ const profileUpdate = async function (req, res, next) {
             {$set: req.body}, 
             {new: true},
         );
+        req.session.currentUser = {
+            id: updatedUser._id,
+            username: updatedUser.username,
+            avatar: updatedUser.avatar,
+            interests: updatedUser.interests,
+            email: updatedUser.email,
+        };
         return res.redirect(`/profile/${updatedUser.id}`);
     } catch (error){
         console.log(error);
