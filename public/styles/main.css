@@ -8,21 +8,20 @@
   background-color: #96c4c5;
   border: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
+  margin-top: 110px;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  min-width: 100%;
 }
 .footerContainer {
   align-items: flex-end;
   border-radius: 10px;
 }
 
-.footerIconsContainer {
-  display: flex;
-  margin-top: 110px;
-  align-items: center;
-  justify-content: space-between;
-  border: 3px solid black;
-  padding: 10px;
-}
 .fas {
   color: #144d53;
 }
+
