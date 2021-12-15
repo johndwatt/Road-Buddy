@@ -1,3 +1,39 @@
+main {
+  background-color: #001d22;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+placeholder {
+  padding-top: 10px;
+}
+
+#signupForm {
+  border: none;
+  background-color: #001d22;
+}
+
+.heroImage {
+  font-family: "Allerta Stencil", sans-serif;
+  font-size: 120px;
+  text-align: center;
+  justify-content: center;
+  margin: 50px 20px 18px 19px;
+  align-items: center;
+  padding: 5vw;
+  color: #ffffff;
+}
+
+.appSuperDuperCatchySlogan {
+  font-size: 28px;
+}
+
 .signupImageContainer {
   display: grid;
   justify-content: center;
@@ -13,19 +49,29 @@
 }
 
 .accountFormContainer {
-  margin: 20px;
+  margin: 0px 20px 20px 20px;
   padding: 10px;
+  background-color: #001d22;
 }
 
 .formInput {
-  width: 75vw;
-  height: 5vh;
-  margin-top: 20px;
+  width: 80vw;
+  height: 6vh;
+  margin-top: 35px;
+  color: #f8ede4;
+  padding-left: 15px;
+  border-radius: 5px;
 }
 
 .createAccountButton {
   margin: 20px;
-  width: 100px;
+  height: 50px;
+  width: 130px;
+  border-radius: 5px;
+  background-color: #ff6958;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .buttonContainer {
