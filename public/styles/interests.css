@@ -13,7 +13,7 @@ main {
   display: grid;
   flex-direction: column;
   align-items: center;
-  height: auto;
+  /* height: 300%; */
   margin: 0;
 }
 
@@ -47,7 +47,7 @@ main {
 
 .interestTitle {
   font-size: 60px;
-  margin: 40px 10px 10px 10px;
+  margin: 40px 10px 5px 10px;
 }
 
 .interestSayin {
@@ -106,6 +106,23 @@ main {
   margin-left: 50px;
 }
 
+.createAccountButton {
+  margin: 20px;
+  height: 50px;
+  width: 130px;
+  border-radius: 5px;
+  background-color: #ff6958;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.buttonContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 #interestSelect {
   display: flex;
   flex-wrap: wrap;
@@ -119,17 +136,15 @@ main {
   margin: 8px;
   background-color: #144d53;
   border-radius: 100px;
-  border: 1px solid #d0d0d0;
   width: auto;
 }
 
 #ck-button:hover {
-  background: red;
+  background-color: red;
 }
 
 #ck-button label {
   font-family: "Roboto";
-
   float: left;
   padding: 3px 10px;
   font-size: 0.8em;
@@ -147,7 +162,9 @@ main {
 }
 
 #ck-button input:checked + span {
-  background-color: #911;
-  border-radius: 10px;
+  background-color: red;
+  /* background-color: #911; */
+  border-radius: 100px;
+  width: 100%;
   color: #fff;
 }
