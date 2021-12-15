@@ -21,27 +21,26 @@
                     <% for(let i=0;i<allMessages.length;i++) { %>
                         <% if (allMessages[i].sender==currentUser.id) { %>
                             <div class="sender_message">
-                                <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %>
+                                <!-- <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %> -->
                                     <a href="/profile/<%= user.id %>">
                                         <%= currentUser.username %>
                                     </a>
                                     : <%= allMessages[i].text %>
                                         <img class="userImage" src="<%= currentUser.avatar %> " alt="" srcset="">
-                                        <% } else {%>
-                                            <div class="receiver_message">
-                                                <a href="/profile/<%= otherUser.id %> ">
-                                                    <img class="userImage" src="<%= otherUser.avatar %> " alt=""
-                                                        srcset="">
-                                                </a>
-                                                <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %>
-                                                    <a href="/profile/<%= otherUser.id %> ">
-                                                        <%= otherUser.username %>
-                                                    </a>
-                                                    : <%= allMessages[i].text %>
-                                                        <% } %>
-                                            </div>
+                        <% } else {%>
+                            <div class="receiver_message">
+                                <a href="/profile/<%= otherUser.id %> ">
+                                    <img class="userImage" src="<%= otherUser.avatar %> " alt=""srcset="">
+                                </a>
+                                <!-- <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %> -->
+                                <a href="/profile/<%= otherUser.id %> ">
+                                    <%= otherUser.username %>
+                                </a>
+                                : <%= allMessages[i].text %>
+                        <% } %>
+                                    </div>
                                             <% } %>
-                                                <div>
+                                                <div id="form__box__container">
                                                     <form action="/message/new/<%=otherUser.id%>"
                                                         method="POST" id="form__box">
                                                         <% if (typeof error !=='undefined' ) { %>
@@ -61,14 +60,18 @@
                                                                     <button class="message__button py-2 px-3">Send
                                                                     </button>
                                                                 </div>
-
                                                     </form>
                                                 </div>
                             </div>
                 </div>
+            <footer>
+                <%- include('../partials/_navbar') %>
+            </footer>
     </body>
 
-    <footer>
-        <%- include('../partials/_navbar') %>
-    </footer>
+
 </html>
+
+<script>
+    $(".messages_container").scrollTop($(".messages_container")[0].scrollHeight);
+</script>

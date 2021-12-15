@@ -5,6 +5,11 @@ body {
 .conversation_name{
     color: #F8EDE4;
     text-align: center;
+    margin: 2vh 0 2vh 0;
+}
+.username{
+    color: black;
+    font-weight: 600;
 }
 .users_container{
     display:grid;
@@ -32,4 +37,18 @@ body {
 
 .username{
     font-size: 1.5rem;
+}
+
+.phone_image{
+    width: 25%;
+    margin: 0 1vw 1.5vh 4vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    position: sticky;
+    top: 0;
 }

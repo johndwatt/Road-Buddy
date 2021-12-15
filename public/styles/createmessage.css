@@ -19,6 +19,7 @@ body {
     background-color: #ff6958;
     color: #000;
     border: solid transparent 1px;
+    box-shadow: 3px 3px 3px grey;
 }
 
 #form__box{
@@ -27,7 +28,7 @@ body {
 
     background-color: #F8EDE4;
     text-align: center;
-    height:20vh;
+    height:25vh;
     width:70vw;
     border-radius: 25px;
     padding-top: 1vh;
@@ -35,4 +36,11 @@ body {
     border:grey solid 2px;
     overflow: auto;
     margin: 0 auto;
+}
+
+.input{
+    padding: 1vh 4vw 1vh 4vw;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+    text-align: center;
 }

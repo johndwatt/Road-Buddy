@@ -6,8 +6,8 @@
         Road Buddies
     </title>
     
-    <link rel="stylesheet" href="/styles/allconversation.css" />
     <link rel="stylesheet" href="/styles/profile.css" />
+    <link rel="stylesheet" href="/styles/allconversation.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
       rel="stylesheet"
@@ -26,18 +26,19 @@
             <% for(let i=0;i<conversations.length;i++) { %>
                 <div class="userContainer">
                     <a href="/profile/<%=userConversations[i]._id%>"><img src="<%= userConversations[i].avatar %> " alt="" srcset="" class="userImage"></a>
-                    <span class="username">@<%= userConversations[i].username %></span>
+                    <a href="/profile/<%=userConversations[i]._id%>"><span class="username">@<%= userConversations[i].username %></span></a>
                     <span>
-                        <a href="<%= userConversations[i].phoneNumber %>"><i class="fas fa-phone-square-alt fa-3x" style="color:black"></i></a>
-                        <a href="/<%=conversations[i]._id%>"><i class="far fa-comments fa-3x" style="color:black"></i></a>
+                        <!-- <a href="<%= userConversations[i].phoneNumber %>"><i class="fas fa-phone-square-alt fa-2x" style="color:black"></i></a> -->
+                        <a href="tel:<%= userConversations[i].phoneNumber %>"><img src="/images/Icon_Phone.svg" class="phone_image"/></a>
+                        <a href="/<%=conversations[i]._id%>"><i class="far fa-comments fa-2x" style="color:black"></i></a>
                     </span>
                 </div>
             <% } %>
         </div>
     </div>
+    <footer>
+        <%- include('../partials/_navbar') %>
+    </footer>
 </body>
 
-<footer>
-    <%- include('../partials/_navbar') %>
-  </footer>
 </html>
