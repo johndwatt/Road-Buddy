@@ -61,8 +61,10 @@ body {
 
 .bio {
   width: 80vw;
-  height: 10vh;
+  height: 15vh;
   color: black;
+  padding: 15px;
+  overflow: scroll;
 }
 
 .switchContainer {
