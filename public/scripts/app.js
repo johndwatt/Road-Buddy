@@ -12,6 +12,9 @@ labels.forEach((label) => {
     .join("");
 });
 
-document.addEventListener("click", function (e) {
+/////Back Button for Interest Selecton page/////////
+
+const back = document.querySelector(".backButton");
+back.addEventListener("click", function (e) {
   history.back();
 });
