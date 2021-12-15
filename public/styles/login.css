@@ -1,0 +1,119 @@
+main {
+  background-color: #001d22;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: scroll;
+  margin: 0;
+}
+
+.errorMessage {
+  color: #ff6958;
+}
+
+.heroImage {
+  font-family: "Allerta Stencil", sans-serif;
+  font-size: 120px;
+  text-align: center;
+  justify-content: center;
+  margin: 50px 20px 18px 19px;
+  align-items: center;
+  padding: 5vw;
+}
+
+.appSuperDuperCatchySlogan {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  position: relative;
+  bottom: 38px;
+  left: 4px;
+}
+
+.container {
+  padding: 90px 40px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: #f8ede4;
+  font-size: 18px;
+}
+.btn:focus {
+  outline: 0;
+}
+
+.accountLoginContainer {
+  display: grid;
+  justify-content: center;
+}
+
+.btn:active {
+  transform: scaleY(0.98);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: #ff6958;
+  padding: 13px;
+  font-family: inherit;
+  font-size: 20px;
+  border: 0;
+  border-radius: 12px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.form-control {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 120%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #f8ede4;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  color: #fff;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #ff6958;
+  transform: translateY(-30px);
+}

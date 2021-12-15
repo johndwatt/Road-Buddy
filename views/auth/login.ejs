@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/_head') %>
+    <link rel="stylesheet" href="/styles/login.css">
+
+  
+  </head>
+  <body>
+    <main>
+      
+      <div class="heroImage">
+        <div class="appTitle">10-44
+          <div class="appSuperDuperCatchySlogan">connection recieved</div>
+        </div>
+        <!-- <div class="appSuperDuperCatchySlogan">connection recieved</div> -->
+      </div>
+      <div class="container">
+
+
+          <div class="formContainer">
+            <form action="/login" method="POST">
+              <% if (typeof error !== "undefined") { %>
+              <p class="errorMessage"><%= error.message %></p>
+              <% } %>
+              <div class="form-control">
+                <input type="text" name="username" required>
+                <label for="">username</label>
+              </div>
+    
+              <div class="form-control">
+                <input type="password" name="password" required>
+                <label>password</label>
+              </div>
+    
+              <button class="btn">Login</button>
+              <div class="accountLoginContainer">
+                  <div class="text">
+                    <a href="/signup">New To Road Buddies?
+                    <Strong class="signuphere"> Sign Up Here!</Strong> </a> 
+                    </div> 
+              </div>
+            </form>
+          </div>
+      </div>
+
+
+      </div>
+    </main>
+  </body>
+</html>

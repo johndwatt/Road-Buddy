@@ -1,0 +1,25 @@
+.buttons {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ff6958;
+    color: #000;
+    border: solid transparent 1px;
+    margin: auto;
+}
+
+body {
+    background-color: #001D22;
+    color: #ffffff;
+    padding: 35px;
+}
+
+.tenor-gif-embed{
+    margin: 10px 0px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}

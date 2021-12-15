@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/_head') %>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/profile.css" />
+  </head>
+  <body>
+      <section>
+        <div class="imageContainer">
+          <img class="profileImage" src="<%= thisUser.avatar %>" alt="" />
+        </div>
+        <div class="profileContents">
+          <div class="username">@<%= thisUser.username %></div>
+          <div class="iconContainer">
+            <i class="fas fa-phone-alt icon"></i>
+            <a href="/message/new/<%=thisUser.id%>">
+              <i class="far fa-envelope icon"></i>
+            </a>
+            <i class="far fa-comment-dots icon"></i>
+          </div>
+          <div class="buttonContainer">
+            <a
+              href="/profile/<%=thisUser.id%>"
+              class="btn buttons active"
+              autocomplete="off"
+              aria-pressed="true"
+            >
+              About
+            </a>
+            <a
+              href="/profile/<%=thisUser.id%>/interests"
+              class="btn buttons"
+              autocomplete="off"
+            >
+              Interest
+            </a>
+          </div>
+          <div class="bioContainer">
+            <p class="bio">
+              <%= thisUser.about %>
+            </p>
+          </div>
+        </div>
+        <div class="editButtonContainer">
+          <% if (user.id === thisUser.id) { %>
+          <a href="/profile/<%= thisUser.id %>/edit" >
+            <button class="buttons">Update profile</button></a
+          >
+          <% } %>
+        </div>
+      </section>
+    <footer>
+      <%- include('../partials/_navbar') %>
+    </footer>
+  </body>
+</html>

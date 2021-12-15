@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/_head') %>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles/profile.css" />
+    <link rel="stylesheet" href="/styles/profileInterests.css" />
+  </head>
+  <body>
+    <header>
+      <section>
+        <div class="imageContainer">
+          <img class="profileImage" src="<%= thisUser.avatar %>" alt="" />
+        </div>
+        <div class="profileContents">
+          <div class="username">@<%= thisUser.username %></div>
+          <div class="iconContainer">
+            <i class="fas fa-phone-alt icon"></i>
+            <a href="/message/new/<%=thisUser.id%>">
+              <i class="far fa-envelope icon"></i>
+            </a>
+            <i class="far fa-comment-dots icon"></i>
+          </div>
+          <div class="buttonContainer">
+            <a
+              href="/profile/<%=thisUser.id%>"
+              class="btn buttons"
+              autocomplete="off" 
+            >
+              About
+            </a>
+            <a
+              href="/profile/<%=thisUser.id%>/interests"
+              class="btn buttons active"
+              autocomplete="off"
+              aria-pressed="true"
+            >
+              Interest
+            </a>
+          </div>
+          <div class="interests-container">
+            <% for(let j = 0; j < thisUser.interests.length; j++) { %>
+                <div class="interest-item">
+                    <span><%= thisUser.interests[j] %></span>
+               </div>
+                
+          <% } %>
+          </div>
+        </div>
+        <div class="editButtonContainer">
+          <% if (user.id === thisUser.id) { %>
+          <a href="/profile/<%= thisUser.id %>/edit">
+            <button class="buttons">Update profile</button></a
+          >
+          <% } %>
+        </div>
+      </section>
+    </header>
+  </body>
+  <footer>
+    <%- include('../partials/_navbar') %>
+  </footer>
+</html>

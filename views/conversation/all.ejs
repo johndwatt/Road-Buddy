@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/_head') %>
+    <title>
+        Road Buddies
+    </title>
+    
+    <link rel="stylesheet" href="/styles/profile.css" />
+    <link rel="stylesheet" href="/styles/allconversation.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+</head>
+
+
+<body>
+    <div class="messages_container">
+        <h1 class="conversation_name">
+            Your Road Buddies
+        </h1>
+    </div>    
+    <div class="main_container">
+        <div class="users_container">
+            <% for(let i=0;i<conversations.length;i++) { %>
+                <div class="userContainer">
+                    <a href="/profile/<%=userConversations[i]._id%>"><img src="<%= userConversations[i].avatar %> " alt="" srcset="" class="userImage"></a>
+                    <a href="/profile/<%=userConversations[i]._id%>"><span class="username">@<%= userConversations[i].username %></span></a>
+                    <span>
+                        <!-- <a href="<%= userConversations[i].phoneNumber %>"><i class="fas fa-phone-square-alt fa-2x" style="color:black"></i></a> -->
+                        <a href="tel:<%= userConversations[i].phoneNumber %>"><img src="/images/Icon_Phone.svg" class="phone_image"/></a>
+                        <a href="/<%=conversations[i]._id%>"><i class="far fa-comments fa-2x" style="color:black"></i></a>
+                    </span>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <footer>
+        <%- include('../partials/_navbar') %>
+    </footer>
+</body>
+
+</html>

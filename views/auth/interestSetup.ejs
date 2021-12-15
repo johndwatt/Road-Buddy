@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/_head') %>
+
+    <link rel="stylesheet" href="styles/interests.css" />
+  </head>
+  <body>
+    <main>
+      <div class="heroImage">
+        <div class="appTitle">
+          10-44
+          <div class="appSuperDuperCatchySlogan">connection recieved</div>
+        </div>
+      </div>
+
+        
+        <div class="selectTextContainer">
+            <div class="interestTitleContainer">
+            <div class="promptTitle">
+            Select your Interests
+            </div>
+          </div>
+
+          <div class="interestPrompt">
+            <div class="promtText">
+            Let us get to know about the things you like so we can match you with the best possible Road Buddies!
+            </div>
+          </div>
+        </div>
+        </div>
+          
+
+
+        <div class="interestContainer">
+          <form action="/interestsetup/<%= currentUser.id %>?_method=PUT" method="POST">
+          <% for(let i = 0; i < categories.length; i++) { %>
+            <div class="interestTitle">
+              <div class='categoryTitle'><%= categoryNames[i] %> </div>
+            </div>
+              <div id="interestSelect">
+                  <% for(let j = 0; j < categories[i].length; j++) { %>
+                    <div id="ck-button">
+                      <label>
+                        <input 
+                          type="checkbox"  
+                          name="interests" 
+                          value="<%=categories[i][j] %>"> 
+                          <span><%= categories[i][j] %></span>
+                        </input>
+                      
+                      </label>
+                  </div>
+                    
+              <% } %>
+              </div>
+          <% } %>
+          <div class="buttonContainer">
+            <button class="createAccountButton" type="submit">Next</button>
+          </form>
+        </div>
+        <button class="backButton" onclick='submit'>Back</button>
+      </div>
+    </main>
+  </body>
+</html>

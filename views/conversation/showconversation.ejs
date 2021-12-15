@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/_head') %>
+        <title>
+            Conversation with <%= otherUser.username %>
+        </title>
+        <link rel="stylesheet" href="/styles/showconversation.css" />
+        <link rel="stylesheet" href="/styles/profile.css" />
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        rel="stylesheet"
+      />
+    </head>
+    <body>
+            <div>
+                <div class="messages_container">
+                    <h1 class="conversation_name">
+                        Conversation with <%= otherUser.username %>
+                    </h1>
+                    <% for(let i=0;i<allMessages.length;i++) { %>
+                        <% if (allMessages[i].sender==currentUser.id) { %>
+                            <div class="sender_message">
+                                <!-- <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %> -->
+                                    <a href="/profile/<%= user.id %>">
+                                        <%= currentUser.username %>
+                                    </a>
+                                    : <%= allMessages[i].text %>
+                                        <img class="userImage" src="<%= currentUser.avatar %> " alt="" srcset="">
+                        <% } else {%>
+                            <div class="receiver_message">
+                                <a href="/profile/<%= otherUser.id %> ">
+                                    <img class="userImage" src="<%= otherUser.avatar %> " alt=""srcset="">
+                                </a>
+                                <!-- <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %> -->
+                                <a href="/profile/<%= otherUser.id %> ">
+                                    <%= otherUser.username %>
+                                </a>
+                                : <%= allMessages[i].text %>
+                        <% } %>
+                                    </div>
+                                            <% } %>
+                                                <div id="form__box__container">
+                                                    <form action="/message/new/<%=otherUser.id%>"
+                                                        method="POST" id="form__box">
+                                                        <% if (typeof error !=='undefined' ) { %>
+                                                            <article class="message is-danger">
+                                                                <div class="message-header">
+                                                                    <p>Danger</p>
+                                                                </div>
+                                                                <div class="message-body">
+                                                                    <%= error.message %>
+                                                                </div>
+                                                            </article>
+                                                            <% } %>
+                                                                <div>
+                                                                    <input maxlength="300" type="text" class="input"
+                                                                        placeholder="Type your message" name="text"
+                                                                        id="text" required>
+                                                                    <button class="message__button py-2 px-3">Send
+                                                                    </button>
+                                                                </div>
+                                                    </form>
+                                                </div>
+                            </div>
+                </div>
+            <footer>
+                <%- include('../partials/_navbar') %>
+            </footer>
+    </body>
+
+
+</html>

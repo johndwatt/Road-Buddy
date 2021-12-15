@@ -1,0 +1,101 @@
+body {
+  background-color: #001d22;
+  padding: 14px 0 0;
+  color: #ffffff;
+}
+
+.imageContainer {
+  border-radius: 30px;
+  width: 100vw;
+  margin-top: 40px;
+  display: flex;
+}
+
+.buttons{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ff6958;
+  color: #000;
+  border: solid transparent 1px;
+}
+
+.profileImage {
+  border-radius: 45px;
+  width: 256.6px;
+  height: 301px;
+  margin: 0 auto;
+}
+
+.profileContents {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.iconContainer {
+  padding: 0px 5px;
+  margin-bottom: 20px;  
+}
+
+.icon {
+  padding: 5px;
+  color: white;
+}
+
+.username {
+  font-size: 30px;
+}
+
+/* .footerContainer {
+  border-radius: 10px;
+} */
+
+.bioContainer {
+  margin: 20px 0px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #f8ede4;
+}
+
+.bio {
+  width: 80vw;
+  height: 15vh;
+  color: black;
+  padding: 15px;
+  overflow: scroll;
+}
+
+.switchContainer {
+  display: grid;
+  justify-content: center;
+}
+
+#flexSwitchCheckChecked {
+  height: 40px;
+  width: 100px;
+}
+
+.editButtonContainer {
+  display: grid;
+  justify-content: center;
+}
+
+.footerContainer {
+  align-items: flex-end;
+  border-radius: 10px;
+}
+
+.footerIconsContainer {
+  display: flex;
+  margin-top: 110px;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid black;
+  padding: 10px;
+}
+
+.active {
+  background-color: #c4c4c4;
+}

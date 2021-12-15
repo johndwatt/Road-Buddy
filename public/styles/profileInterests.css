@@ -1,0 +1,13 @@
+.interests-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+
+.interest-item {
+  margin: 10px;
+  padding: 10px;
+  background-color: #144d53;
+  border-radius: 100px;
+  width: auto;
+}

@@ -1,0 +1,54 @@
+body {
+    background: #001D22;
+}
+
+.conversation_name{
+    color: #F8EDE4;
+    text-align: center;
+    margin: 2vh 0 2vh 0;
+}
+.username{
+    color: black;
+    font-weight: 600;
+}
+.users_container{
+    display:grid;
+    align-items: center;
+    justify-items: center;
+}
+.userContainer {
+    border-radius: 10px;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #F8EDE4;
+    align-items: center;
+    margin-top: 1vh;
+    height:10vh;
+}
+  
+.userImage {
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 1vw;
+    overflow: hidden;
+    margin-left: 3vw;
+}
+
+.username{
+    font-size: 1.5rem;
+}
+
+.phone_image{
+    width: 25%;
+    margin: 0 1vw 1.5vh 4vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    position: sticky;
+    top: 0;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/_head') %>
+    <link rel="stylesheet" href="styles/matches.css" />
+</head>
+    <body>
+        <div id='portrait'>
+            <h2 class='matches-title'> Matches</h2>
+                <section class='profile-match'>
+                        <div class='port'>
+                            <img class='image-profile' src="<%= thisUser.avatar %> " alt="profile-photo" >
+                            <!-- <div class="arrow-left"></div> -->
+                            <!-- <a href="/matches"><img  class="arrow-left" src="/images/leftarrow.svg"></a>
+                            <a href="/matches"><img  class="arrow-right" src="images/Icon_Arrow (right).svg"> </a> -->
+                        </div>
+                        <span class='tag-handler'> <strong>@<%= thisUser.username %>  </strong></span>
+                        <div class='interest-container'>
+                            <% for(let i = 0; i < thisUser.interests.length; i++) { %>
+                                <div class="interestTitle">
+                                <span class='interest-item'> <%= thisUser.interests[i] %> </span>
+                                </div>
+                            <% } %>
+                            </div>
+                        <a href="/message/new/<%=thisUser.id%>">
+                            <div>
+                                <button class='match-button'>Request Buddy </button>
+                            </div>
+                        </a>
+
+                        <a href="/matches">
+                            <div>
+                                <button class='refresh-button'>Find New Buddy </button>
+                            </div>
+                        </a>
+                </section>
+            </div>
+            <footer>
+                <%- include('../partials/_navbar') %>
+            </footer>
+    </body>
+</html>

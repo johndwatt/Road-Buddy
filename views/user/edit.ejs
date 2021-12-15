@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/_head') %>
+
+    <link rel="stylesheet" href="/styles/edit.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <form action="/profile/<%= userToEdit.id %>?_method=PUT" method="POST">
+            <% if (typeof error !== "undefined") { %>
+                <p><%= error.message %></p> 
+            <% } %>
+        <div class="imageContainer">
+          <img class="profileImage" src="<%= userToEdit.avatar %>" alt="" />
+        </div>
+        <div class="profileContents">
+          <div class="title">Username</div>
+          <input
+            class="input"
+            type="text"
+            name="username"
+            value="<%= userToEdit.username %>"
+            required
+          />
+          <div>
+            <div class="title">Email</div>
+            <input
+              class="input"
+              type="email"
+              name="email"
+              value="<%= userToEdit.email %>"
+              required
+            />
+            <div class="title">Bio</div>
+            <textarea
+              class="input"
+              name="about"
+              rows="4" 
+              cols="30"><%= userToEdit.about %>
+            </textarea>
+          </div>
+          <div class="title">Avatar</div>
+          <input class="input" type="text" name="avatar" value="<%= userToEdit.avatar %>" />
+          <div class="title">Interests</div>
+          <input
+            class="input"
+            type="textarea"
+            name="interests"
+            value="<%= userToEdit.interests %>"
+          />
+        </div>
+
+        <div class="editButtonContainer">
+          <% if (user.id === userToEdit.id) { %>
+          <a href="/profile/<%= userToEdit.id %>/edit">
+            <button class="buttons">Update profile</button></a
+          >
+          <% } %>
+        </div>
+      </section>
+      </form>
+    </main>
+    <footer>
+      <%- include('../partials/_navbar') %>
+    </footer>
+  </body>
+</html>

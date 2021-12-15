@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/_head') %>
+    <link rel="stylesheet" href="styles/signup.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="heroImage">
+          <div class="appTitle">
+            10-44
+            <div class="appSuperDuperCatchySlogan">connection recieved</div>
+          </div>
+        </div>
+        <div class="accountFormContainer">
+          <form
+            action="/signup"
+            method="POST"
+            class="form-control"
+            id="signupForm"
+          >
+            <% if (typeof error !== "undefined") { %>
+            <p class="errorMessage"><%= error.message %></p>
+            <% } %>
+            <div>
+              <div class="registerInputFields">
+                <input
+                  class="formInput"
+                  type="email"
+                  name="email"
+                  placeholder="email*"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  class="formInput"
+                  type="text"
+                  name="phone"
+                  placeholder="phone*"
+                />
+              </div>
+              <input
+                class="formInput"
+                type="text"
+                name="username"
+                placeholder="username*"
+                maxlength="10"
+                required
+              />
+            </div>
+            <div>
+              <input
+                class="formInput"
+                type="password"
+                name="password"
+                placeholder="password*"
+                required
+              />
+            </div>
+            <div class="buttonContainer">
+              <button class="createAccountButton" type="submit">Next</button>
+            </form>
+          </div>
+          <button class="backButton" onclick='submit'>Back</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

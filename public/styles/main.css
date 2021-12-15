@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.footerIconsContainer {
+  background-color: #96c4c5;
+  border: none;
+  display: flex;
+  justify-content: space-between;  
+  margin-top: 110px;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  min-width: 100%;
+}
+.footerContainer {
+  align-items: flex-end;
+  border-radius: 10px;
+}
+
+.fas {
+  color: #144d53;
+}
+

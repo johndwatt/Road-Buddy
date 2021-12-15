@@ -1,0 +1,53 @@
+body {
+  background-color: #001d22;
+  padding: 14px 0 0;
+  color: #ffffff;
+}
+
+.imageContainer {
+  border-radius: 30px;
+  width: 100vw;
+  margin-top: 40px;
+  display: flex;
+}
+
+.profileImage {
+  border-radius: 45px;
+  width: 256.6px;
+  height: 301px;
+  margin: 0 auto;
+}
+
+.profileContents {
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.profileContents .title {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.editButtonContainer {
+  display: grid;
+  justify-content: center;
+  margin: 20px 0px 70px 0px;
+}
+
+.buttons{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ff6958;
+  color: #000;
+  border: solid transparent 1px;
+}
+
+.input{
+  padding: 1vh 4vw 1vh 4vw;
+  margin-bottom: 1vh;
+  border-radius: 10px;
+  text-align: left;
+}

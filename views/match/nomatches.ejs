@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/_head') %>
+    <link rel="stylesheet" href="styles/profile.css" />
+    <link rel="stylesheet" href="styles/nomatches.css" />
+</head>
+    <body>
+        <div id='portrait'>
+                <section class='profile-match'>
+                    <h2 class='matches-title'> Matches</h2>
+                    <p>Sorry, no matches found, please try again another time.</p>
+                    <form action="/" method="GET" class="btn-container">
+                        <button type="submit" class="btn buttons">Return</button>
+                    </form>
+                </section>
+            </div>
+            <footer>
+                <%- include('../partials/_navbar') %>
+            </footer>
+    </body>
+</html>
