@@ -118,6 +118,7 @@ main {
   position: relative;
   bottom: 38px;
   left: 4px;
+  border: solid transparent 1px;
 }
 .backButton {
   margin: 43px 20px 20px 10px;
@@ -128,10 +129,10 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-
   position: relative;
   bottom: 38px;
   left: 4px;
+  border: solid transparent 1px;
 }
 
 .buttonContainer {
@@ -156,13 +157,12 @@ main {
 }
 
 #ck-button:hover {
-  background-color: red;
+  background-color: #ff6958;
 }
 
 #ck-button label {
   font-family: "Roboto";
   float: left;
-  padding: 3px 10px;
   font-size: 0.8em;
   display: block;
   position: relative;
@@ -171,7 +171,7 @@ main {
 
 #ck-button label span {
   text-align: center;
-  padding: 3px 4px;
+  padding: 3px 10px;
   display: block;
 }
 
@@ -182,8 +182,9 @@ main {
 
 #ck-button input:checked + span {
   background-color: #ff6958;
-  border-radius: 124px;
+  border-radius: 12px;
   width: 100%;
   height: auto;
   color: #fff;
+  /* padding: 3px 10px; */
 }

@@ -90,11 +90,11 @@ const signupPost = async function (req, res, next) {
 
 const interestSetup = async function (req,res,next) {
     try {
-        const sports = ["Golf", "Basketball", "Football"]
-        const music = ["Rap", "Country", "Rock", "Pop"]
-        const movies = ["Action", "Comedy", "Horror"]
-        const podcasts = ["Comedy", "News"]
-        const currentUser = req.session.currentUser
+        const sports = ["Golf", "Basketball", "Football","Baseball","Nascar", "Hockey"]
+        const music = ["Rap", "Country", "Rock", "Pop", "Metal", "Classic", "EDM", "Jazz","Folk"]
+        const movies = ["Action", "Comedy", "Horror","Drama","Romance", "Sci-Fi", "Documentary","Foreign"]
+        const podcasts = ["Comedy", "News","True Crime", "Health and Wellness", "Self Help","History"]
+        const currentUser = req.session.currentUser;
         const context = {
             categoryNames: ['Sports', "Music", "Movies", "Podcasts"],
             categories: [sports, music, movies, podcasts],
