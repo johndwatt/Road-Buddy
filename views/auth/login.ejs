@@ -21,7 +21,7 @@
           <div class="formContainer">
             <form action="/login" method="POST">
               <% if (typeof error !== "undefined") { %>
-              <p><%= error.message %></p>
+              <p class="errorMessage"><%= error.message %></p>
               <% } %>
               <div class="form-control">
                 <input type="text" name="username" required>

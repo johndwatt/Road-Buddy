@@ -10,7 +10,12 @@ main {
   margin: 0;
 }
 
-placeholder {
+.errorMessage {
+  color: #ff6958;
+  font-size: 16px;
+  text-align: center;
+}
+r placeholder {
   padding-top: 10px;
 }
 
