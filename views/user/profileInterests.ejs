@@ -28,14 +28,14 @@
           <div class="buttonContainer">
             <a
               href="/profile/<%=thisUser.id%>"
-              class="btn btn-primary"
+              class="btn buttons"
               autocomplete="off" 
             >
               About
             </a>
             <a
               href="/profile/<%=thisUser.id%>/interests"
-              class="btn btn-primary active"
+              class="btn buttons active"
               autocomplete="off"
               aria-pressed="true"
             >
@@ -54,7 +54,7 @@
         <div class="editButtonContainer">
           <% if (user.id === thisUser.id) { %>
           <a href="/profile/<%= thisUser.id %>/edit">
-            <button>Update profile</button></a
+            <button class="buttons">Update profile</button></a
           >
           <% } %>
         </div>
