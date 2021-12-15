@@ -6,9 +6,9 @@
 </head>
 <body>
     <%- include('../partials/_navbar') %>
-        <header>
+    <div id='portrait'>
             <section class='match-section'>
-                    <h3>Your Flip Flop Matches</h3>
+                    <h2>Your Buddy Matches</h2>
                     <div>
                         <img class='avatar-image' src="<%= thisUser.avatar %>" alt="profile-photo">
                     </div>
@@ -18,13 +18,13 @@
                     <p class='interests'>Interests:
                         <% for(let i = 0; i < thisUser.interests.length; i++) { %>
                             <div class="interestTitle">
-                              <span> <%= thisUser.interests[i] %> </span>
+                              <span class='interest'> <%= thisUser.interests[i] %> </span>
                             </div>
                          <% } %>
-
+                    </p>
                     <a href="/message/new/<%=thisUser.id%>">
                         <div>
-                            <button> Match with <%= thisUser.username %>.</button>
+                            <button class='match-button'> Match with <%= thisUser.username %>.</button>
                         </div>
                         <br>
                         <div>
@@ -32,7 +32,8 @@
                         </div>
                     </a>
             </section>
-        </header>
+        </div>
+
     
 </body>
 </html>
