@@ -10,12 +10,17 @@
    <body>
      <!-- <%- include('../partials/_navbar') %> -->
      <main>
+        <form action="/interestsetup/<%= currentUser.id %>?_method=PUT" method="POST">
         <% for(let i = 0; i < categories.length; i++) { %>
             <h2><%= categoryNames[i] %> </h2>
                 <% for(let j = 0; j < categories[i].length; j++) { %>
-                   <button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off"> <%= categories[i][j] %> </button>
+                   <input type="checkbox"  name="interests"> <%= categories[i][j] %> </input>
             <% } %>
          <% } %>
+        <div>
+            <input type="submit">Submit New Post</input>
+        </div>
+        </form>
      </main>
    </body>
  </html>
