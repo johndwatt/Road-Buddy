@@ -4,36 +4,33 @@
     <%- include('../partials/_head') %>
     <link rel="stylesheet" href="styles/matches.css" />
 </head>
-<body>
-    <%- include('../partials/_navbar') %>
-    <div id='portrait'>
-            <section class='match-section'>
-                    <h2>Your Buddy Matches</h2>
-                    <div>
-                        <img class='avatar-image' src="<%= thisUser.avatar %>" alt="profile-photo">
-                    </div>
-                    <p>You and <%= thisUser.username %> have a common interest in <%= commonInterest %>.</p>
-                    <!-- <p>Username: <%= thisUser.username %></p> -->
-                    <p>Join Date: <%= thisUser.createdAt.toLocaleDateString() %> %></p>
-                    <p class='interests'>Interests:
-                        <% for(let i = 0; i < thisUser.interests.length; i++) { %>
-                            <div class="interestTitle">
-                              <span class='interest'> <%= thisUser.interests[i] %> </span>
+    <body>
+        <%- include('../partials/_navbar') %>
+        <div id='portrait'>
+            <h2 class='matches-title'> Matches</h2>
+                <section class='profile-match'>
+                        <div>
+                            <img class='image-profile' src="<%= thisUser.avatar %>" alt="profile-photo">
+                            <!-- <div class="arrow-left"></div> -->
+                        </div>
+                        <span class='tag-handler'> <strong>@<%= thisUser.username %>  </strong></span>
+                        <div class='interest-section'>
+                            <% for(let i = 0; i < thisUser.interests.length; i++) { %>
+                                <div class="interestTitle">
+                                <span class='interest'> <%= thisUser.interests[i] %> </span>
+                                </div>
+                            <% } %>
                             </div>
-                         <% } %>
-                    </p>
-                    <a href="/message/new/<%=thisUser.id%>">
-                        <div>
-                            <button class='match-button'> Match with <%= thisUser.username %>.</button>
-                        </div>
-                        <br>
-                        <div>
-                            <button class='done-button'> Done </button>
-                        </div>
-                    </a>
-            </section>
-        </div>
-
-    
-</body>
+                        <a href="/message/new/<%=thisUser.id%>">
+                            <div>
+                                <button class='match-button'>Request Buddy </button>
+                            </div>
+                            <br>
+                            <div>
+                                <button class='done-button'> Done </button>
+                            </div>
+                        </a>
+                </section>
+            </div>
+    </body>
 </html>
