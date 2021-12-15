@@ -36,11 +36,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(require("./utils/logger"));
 
+const authRequired = (req, res, next) => {
+    if(!req.session.currentUser){
+      return res.redirect("/login");
+    }
+    next();
+}
+
 // Routes
 app.use("/", routes.auth);
-app.use("/", routes.profile);
-app.use("/matches", routes.match);
-app.use("/", routes.conversation);
+app.use("/", authRequired, routes.profile);
+app.use("/matches", authRequired, routes.match);
+app.use("/", authRequired, routes.conversation);
 
 app.get("/*", function (req, res, next) {
     res.render("404");
