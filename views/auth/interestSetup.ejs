@@ -14,7 +14,7 @@
         <% for(let i = 0; i < categories.length; i++) { %>
             <h2><%= categoryNames[i] %> </h2>
                 <% for(let j = 0; j < categories[i].length; j++) { %>
-                   <input type="checkbox"  name="interests"> <%= categories[i][j] %> </input>
+                   <input type="checkbox"  name="interests" value="<%=categories[i][j] %>" name="interests"> <%= categories[i][j] %> </input>
             <% } %>
          <% } %>
         <div>
