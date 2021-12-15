@@ -2,24 +2,35 @@
 <html lang="en">
 <head>
     <%- include('../partials/_head') %>
+    <link rel="stylesheet" href="styles/matches.css" />
 </head>
 <body>
     <%- include('../partials/_navbar') %>
         <header>
-            <section>
-                <h3>Potential Matches</h3>
-                <div>
-                    <img src="<%= thisUser.avatar %>" alt="profile-photo">
-                </div>
-                <p>You and <%= thisUser.username %> have a common interest in <%= commonInterest %>.</p>
-                <p><%= thisUser.username %></p>
-                <p>Join Date: <%= thisUser.createdAt.toLocaleDateString() %> %></p>
-                <p>Interests: <%= thisUser.interests%> %></p>
-                <a href="/message/new/<%=thisUser.id%>">
+            <section class='match-section'>
+                    <h3>Your Flip Flop Matches</h3>
                     <div>
-                        Match with <%= thisUser.username %>.
+                        <img class='avatar-image' src="<%= thisUser.avatar %>" alt="profile-photo">
                     </div>
-                </a>
+                    <p>You and <%= thisUser.username %> have a common interest in <%= commonInterest %>.</p>
+                    <!-- <p>Username: <%= thisUser.username %></p> -->
+                    <p>Join Date: <%= thisUser.createdAt.toLocaleDateString() %> %></p>
+                    <p class='interests'>Interests:
+                        <% for(let i = 0; i < thisUser.interests.length; i++) { %>
+                            <div class="interestTitle">
+                              <span> <%= thisUser.interests[i] %> </span>
+                            </div>
+                         <% } %>
+
+                    <a href="/message/new/<%=thisUser.id%>">
+                        <div>
+                            <button> Match with <%= thisUser.username %>.</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class='done-button'> Done </button>
+                        </div>
+                    </a>
             </section>
         </header>
     
