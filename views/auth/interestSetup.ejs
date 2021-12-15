@@ -1,24 +1,38 @@
-
-
-
- <!DOCTYPE html>
+<!DOCTYPE html>
  <html lang="en">
    <head>
      <%- include('../partials/_head') %>
-     <link rel="stylesheet" href="styles/signup.css" />
+     <!-- <link rel="stylesheet" href="styles/signup.css" /> -->
+     <link rel="stylesheet" href="styles/interests.css" />
    </head>
    <body>
      <!-- <%- include('../partials/_navbar') %> -->
      <main>
         <form action="/interestsetup/<%= currentUser.id %>?_method=PUT" method="POST">
         <% for(let i = 0; i < categories.length; i++) { %>
+          <div class="interestTitle">
             <h2><%= categoryNames[i] %> </h2>
+          </div>
+            <div id="interestSelect">
                 <% for(let j = 0; j < categories[i].length; j++) { %>
-                   <input type="checkbox"  name="interests"> <%= categories[i][j] %> </input>
+                  <div id="ck-button">
+                    <label>
+                      <input 
+                        type="checkbox"  
+                        name="interests" 
+                        value="<%=categories[i][j] %>"> 
+                        <span><%= categories[i][j] %></span>
+                      </input>
+                    
+                    </label>
+                 </div>
+                  
             <% } %>
+            </div>
+
          <% } %>
         <div>
-            <input type="submit">Submit New Post</input>
+            <input type="submit">Select Interests</input>
         </div>
         </form>
      </main>
