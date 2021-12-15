@@ -5,12 +5,13 @@
         <title>
             Conversation with <%= otherUser.username %>
         </title>
+        <link rel="stylesheet" href="/styles/showconversation.css" />
+        <link rel="stylesheet" href="/styles/profile.css" />
     </head>
     <body>
-        <%- include('../partials/_navbar') %>
             <div>
                 <div class="messages_container">
-                    <h1>
+                    <h1 class="conversation_name">
                         Conversation with <%= otherUser.username %>
                     </h1>
                     <% for(let i=0;i<allMessages.length;i++) { %>
@@ -21,11 +22,11 @@
                                         <%= currentUser.username %>
                                     </a>
                                     : <%= allMessages[i].text %>
-                                        <img class="avatar_img" src="<%= currentUser.avatar %> " alt="" srcset="">
+                                        <img class="userImage" src="<%= currentUser.avatar %> " alt="" srcset="">
                                         <% } else {%>
                                             <div class="receiver_message">
                                                 <a href="/profile/<%= otherUser.id %> ">
-                                                    <img class="avatar_img" src="<%= otherUser.avatar %> " alt=""
+                                                    <img class="userImage" src="<%= otherUser.avatar %> " alt=""
                                                         srcset="">
                                                 </a>
                                                 <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %>
@@ -62,3 +63,8 @@
                             </div>
                 </div>
     </body>
+
+    <footer>
+        <%- include('../partials/_navbar') %>
+      </footer>
+    </html>
