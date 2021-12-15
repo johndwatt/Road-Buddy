@@ -19,18 +19,14 @@ const profileRoute = async function (req, res, next){
                 }],
             };
             const foundUser = await User.findById({ _id: req.params.id });
-            //const userJournals = await Journal.find({ userId: foundUser.id }).find(query).sort('-createdAt');
             const context = {
                 thisUser: foundUser,
-                //userJournals: userJournals,
             };
             return res.render("user/profile", context);
         } else {
             const foundUser = await User.findById({ _id: req.params.id });
-            //const userJournals = await Journal.find({ userId: foundUser.id }).sort('-createdAt');
             const context = {
                 thisUser: foundUser,
-                //userJournals: userJournals,
             };
             return res.render("user/profile", context);
         }
@@ -42,6 +38,22 @@ const profileRoute = async function (req, res, next){
     }
 }
 
+
+const profileInterestRoute = async function (req, res, next){
+    try {
+        const foundUser = await User.findById({ _id: req.params.id });
+        const context = {
+            thisUser: foundUser,
+        };
+        return res.render("user/profileInterests", context);
+        
+        
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+}
 
 //edit
 const profileEdit = async function (req, res, next) {
@@ -108,6 +120,7 @@ const profileUpdate = async function (req, res, next) {
 
 module.exports = {
     profileRoute,
+    profileInterestRoute,
     profileEdit,
     profileUpdate,
 }
