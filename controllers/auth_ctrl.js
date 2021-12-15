@@ -147,4 +147,4 @@ module.exports = {
     logoutRoute,
     interestSetup,
     interestUpdate,
-}
+};
