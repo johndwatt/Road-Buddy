@@ -106,27 +106,10 @@ const interestSetup = async function (req,res,next) {
         return next();
     }
 }
+
 const interestUpdate = async function (req, res, next) {
     try {
         const foundUser = await User.findById({ _id: req.params.id });
-        const checkUsername = await User.exists({ username: req.body.username });
-        const checkEmail = await User.exists({ email: req.body.email });
-        if (checkUsername === true && foundUser.username !== req.body.username) {
-            const context = {
-                userToEdit: foundUser,
-                error: {
-                    message: "This username is already in use. You cannot update your profile to have the same username as another account." }
-            }
-            return res.render("user/edit", context);
-        };
-        if (checkEmail === true && foundUser.email !== req.body.email) {
-            const context = {
-                userToEdit: foundUser,
-                error: {
-                    message: "This email is already in use. You cannot update your profile to have the same email as another account." }
-            }
-            return res.render("user/edit", context);
-        };
         const updatedUser = await User.findByIdAndUpdate(
             req.params.id,
             {$set: req.body}, 
@@ -134,10 +117,7 @@ const interestUpdate = async function (req, res, next) {
         );
         req.session.currentUser = {
             id: updatedUser._id,
-            username: updatedUser.username,
-            avatar: updatedUser.avatar,
             interests: updatedUser.interests,
-            email: updatedUser.email,
         };
         return res.redirect(`/profile/${updatedUser.id}`);
     } catch (error){
@@ -167,4 +147,4 @@ module.exports = {
     logoutRoute,
     interestSetup,
     interestUpdate,
-}
+};
