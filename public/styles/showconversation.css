@@ -73,6 +73,7 @@ body {
 #form__box__container{
     justify-self: center;
     border-radius: 10px;
+    margin-bottom: 70px;
 }
 a{
     text-decoration: none;

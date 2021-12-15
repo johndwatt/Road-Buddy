@@ -32,7 +32,7 @@ body {
 .editButtonContainer {
   display: grid;
   justify-content: center;
-  margin: 20px;
+  margin: 20px 0px 70px 0px;
 }
 
 .buttons{
