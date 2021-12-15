@@ -1,0 +1,27 @@
+body {
+    background: #001D22;
+}
+.conversation_name{
+    color: #F8EDE4;
+    text-align: center;
+}
+.messages_container{
+    text-align: center;
+}
+.userImage {
+    border-radius: 45px;
+    width: 15%;
+}
+
+.sender_message{
+    color: #F8EDE4;
+    background-color: #96C4C5;
+    margin-bottom: .5rem;
+    border-radius: 15px;
+}
+
+.receiver_message{
+    color: #F8EDE4;
+    background-color: aqua;
+    border-radius: 15px;
+}
