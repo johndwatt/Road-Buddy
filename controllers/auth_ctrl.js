@@ -73,7 +73,8 @@ const signupPost = async function (req, res, next) {
             username: newUser.username,
             interests: newUser.interests,
         };
-        return res.redirect(`/profile/${newUser._id}`);
+        // return res.redirect(`/profile/${newUser._id}`);
+        return res.redirect(`/interestsetup`);
     } catch (error){
         if (error === "userExists") {
             const error = {

@@ -3,30 +3,39 @@
 <head>
     <%- include('../partials/_head') %>
     <title>
-        Conversations
+        Road Buddies
     </title>
+    
+    <link rel="stylesheet" href="/styles/allconversation.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
 </head>
 
 
 <body>
     <%- include('../partials/_navbar') %>
     <div class="messages_container">
-        <h1 class="conversation_name" style="top:40%;position:relative">
-            Conversations
+        <h1 class="conversation_name">
+            Online Road Buddies
         </h1>
         </div>    
     <div class="main_container">
         <div class="users_container">
             <% for(let i=0;i<conversations.length;i++) { %>
                 <a href="/<%=conversations[i]._id%>">
-                    <div class="nonactive_conversation user_container py-1">
-                        <img src="<%= userConversations[i].avatar %> " alt="" srcset="" class="avatar_img">
-                        <%= userConversations[i].username %>
+                    <div class="imageContainer">
+                        <img src="<%= userConversations[i].avatar %> " alt="" srcset="" class="profileImage">
+                        <span><%= userConversations[i].username %></span>
+                        <i class="fas fa-phone-square-alt fa-2x"></i>
                     </div>
                 </a>
-                <% } %>
+            <% } %>
+            <h1 class="conversation_name">
+                Offline Road Buddies
+            </h1>
         </div>
-
     </div>
 </body>
 
