@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+/* @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap"); */
 
 body{
     width: 428px;
@@ -13,7 +13,7 @@ body{
     width: 140px;
     height: 42px;
     margin: 70px 150px -50px ;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 36px;
     font-weight: bold;
     font-stretch: normal;
@@ -26,7 +26,7 @@ body{
 
 .profile-match {
   width: 326px;
-  height: 610px;
+  height: auto;
   margin: 75px 16px 32px 55px;
   padding: 17px 16px 51.5px 38px;
   border-radius: 10px;
@@ -76,21 +76,22 @@ body{
     margin: 147px 4.5px 112px 0;
 } */
 
-.interestTitle{
-    display: grid;
-    place-items: center;
-    grid-template-rows: repeat(1, 2fr);  
+.interest-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px; 
 }
 
-.interest{
-    width: 76px;
-    height: 37px;
+.interest-item{
+    width: auto;
+    /* height: 37px; */
     font-size: 0.8em;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 8px 12px; 
     margin: 10px;
+    padding: 10px;
     color: #ffffff;
     background-color: #FB6959;
     border: solid transparent 1px;

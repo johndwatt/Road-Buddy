@@ -48,9 +48,9 @@ body {
   font-size: 30px;
 }
 
-.footerContainer {
+/* .footerContainer {
   border-radius: 10px;
-}
+} */
 
 .bioContainer {
   margin: 20px 0px;
@@ -84,6 +84,7 @@ body {
 
 .footerContainer {
   align-items: flex-end;
+  border-radius: 10px;
 }
 
 .footerIconsContainer {

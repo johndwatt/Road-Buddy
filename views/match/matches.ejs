@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="styles/matches.css" />
 </head>
     <body>
-        <%- include('../partials/_navbar') %>
         <div id='portrait'>
             <h2 class='matches-title'> Matches</h2>
                 <section class='profile-match'>
@@ -14,10 +13,10 @@
                             <!-- <div class="arrow-left"></div> -->
                         </div>
                         <span class='tag-handler'> <strong>@<%= thisUser.username %>  </strong></span>
-                        <div class='interest-section'>
+                        <div class='interest-container'>
                             <% for(let i = 0; i < thisUser.interests.length; i++) { %>
                                 <div class="interestTitle">
-                                <span class='interest'> <%= thisUser.interests[i] %> </span>
+                                <span class='interest-item'> <%= thisUser.interests[i] %> </span>
                                 </div>
                             <% } %>
                             </div>
@@ -26,13 +25,10 @@
                                 <button class='match-button'>Request Buddy </button>
                             </div>
                         </a>
-                            <br>
-                        <a href="/">
-                            <div>
-                                <button class='done-button'> Done </button> 
-                            </div>
-                        </a>
                 </section>
             </div>
+            <footer>
+                <%- include('../partials/_navbar') %>
+            </footer>
     </body>
 </html>
