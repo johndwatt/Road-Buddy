@@ -11,3 +11,7 @@ labels.forEach((label) => {
     )
     .join("");
 });
+
+document.addEventListener("click", function (e) {
+  history.back();
+});
