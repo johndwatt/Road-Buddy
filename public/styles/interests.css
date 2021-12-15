@@ -164,11 +164,14 @@ main {
   float: left;
   padding: 3px 10px;
   font-size: 0.8em;
+  display: block;
+  position: relative;
+  overflow: hidden;
 }
 
 #ck-button label span {
   text-align: center;
-  padding: 3px 0px;
+  padding: 3px 4px;
   display: block;
 }
 
@@ -178,9 +181,9 @@ main {
 }
 
 #ck-button input:checked + span {
-  background-color: red;
-  /* background-color: #911; */
-  border-radius: 100px;
+  background-color: #ff6958;
+  border-radius: 124px;
   width: 100%;
+  height: auto;
   color: #fff;
 }
