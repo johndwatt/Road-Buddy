@@ -24,6 +24,9 @@ main {
 
 .appSuperDuperCatchySlogan {
   font-size: 28px;
+  position: relative;
+  bottom: 38px;
+  left: 4px;
 }
 
 .container {

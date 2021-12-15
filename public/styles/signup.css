@@ -32,6 +32,9 @@ placeholder {
 
 .appSuperDuperCatchySlogan {
   font-size: 28px;
+  position: relative;
+  bottom: 38px;
+  left: 4px;
 }
 
 .signupImageContainer {
