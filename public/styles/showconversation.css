@@ -11,8 +11,9 @@ body {
     /* justify-items: center; */
 }
 .userImage {
-    border-radius: 45px;
-    width: 15%;
+    border-radius: 15px;
+    width: auto;
+    height: 100%;
 }
 
 .sender_message{
