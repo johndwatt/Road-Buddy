@@ -5,13 +5,18 @@
         <title>
             New Message
         </title>
+        <link rel="stylesheet" href="/styles/createmessage.css" />
         <link rel="stylesheet" href="/styles/profile.css" />
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        rel="stylesheet"
+      />
     </head>
     <body>
         <div>
             <div style="height:30vh">
-                <h1 >Send a Message to <%= receiver.username %> </h1>
-                <form action="/message/new/<%=receiver.id%>" method="POST">
+                <h1 class="conversation_name">Send a Message to <%= receiver.username %> </h1>
+                <form action="/message/new/<%=receiver.id%>" method="POST" id="form__box">
                     <% if (typeof error !=='undefined' ) { %>
                         <article class="message is-danger">
                             <div class="message-header">
@@ -24,10 +29,10 @@
                         <% } %>
                             <div class="form__input mt-5" >
                                 <input maxlength="300" type="text" class="input" placeholder="Message text"
-                                    name="text" id="message_text" >
+                                    name="text" id="message_text" required>
                             </div>
                             <div>
-                                <button class="form__button">Send Message</button>
+                                <button class="form__button">Send</button>
                             </div>
                 </form>
             </div>
