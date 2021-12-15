@@ -1,8 +1,6 @@
-/* //////login Page//////// */
-
 main {
   background-color: #001d22;
-  color: white;
+
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;

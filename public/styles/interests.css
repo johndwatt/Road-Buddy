@@ -3,7 +3,37 @@ div label input {
 }
 
 body {
-  font-family: sans-serif;
+  background-color: #001d22;
+}
+
+main {
+  background-color: #001d22;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin: 0;
+}
+
+.heroImage {
+  font-family: "Allerta Stencil", sans-serif;
+  font-size: 120px;
+  text-align: center;
+  justify-content: center;
+  margin: 50px 20px -48px 19px;
+  align-items: center;
+  padding: 5vw;
+  color: #ffffff;
+}
+
+.appSuperDuperCatchySlogan {
+  font-size: 28px;
+  position: relative;
+  bottom: 38px;
+  left: 4px;
+  font-family: "Roboto", sans-serif;
 }
 
 .titleContainer {
@@ -32,6 +62,7 @@ body {
 .interestPrompt {
   display: grid;
   justify-content: center;
+  width: 90%;
 }
 
 .interestTextContainer {
@@ -43,24 +74,32 @@ body {
 .selectTextContainer {
   display: grid;
   justify-content: center;
-  margin: 50px 0px 30px 55px;
+  margin: 50px 0px 30px 39px;
   border: 1px solid black;
-  width: 70vw;
+  width: 83vw;
   border-radius: 10px;
+  background-color: #f8ede4;
+  color: black;
 }
 
 .categoryTitle {
+  font-family: "Roboto", sans-serif;
+
   font-size: 36px;
 }
 
 .promptTitle {
-  font-size: 20px;
+  font-family: "Roboto";
+  font-size: 30px;
   padding: 10px;
 }
 
 .promtText {
-  font-size: 12px;
-  padding: 4px;
+  font-family: "Roboto";
+
+  font-size: 14px;
+  padding: 4px 4px 10px 4px;
+  margin-left: 35px;
 }
 
 .interestContainer {
@@ -78,8 +117,8 @@ body {
 
 #ck-button {
   margin: 8px;
-  background-color: #efefef;
-  border-radius: 10px;
+  background-color: #144d53;
+  border-radius: 100px;
   border: 1px solid #d0d0d0;
   width: auto;
 }
@@ -89,6 +128,8 @@ body {
 }
 
 #ck-button label {
+  font-family: "Roboto";
+
   float: left;
   padding: 3px 10px;
   font-size: 0.8em;
