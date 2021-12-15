@@ -25,7 +25,11 @@ const userSchema = new mongoose.Schema(
         }],
         phoneNumber: {
             type: Number,
-        }
+        },
+        about: {
+            type: String,
+            default: "Here's my biography! Thanks for having a look."
+        },
     },
     {
         timestamps: true,
