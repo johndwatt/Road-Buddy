@@ -37,11 +37,11 @@ placeholder {
 }
 
 .appSuperDuperCatchySlogan {
-  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
   position: relative;
   bottom: 38px;
   left: 4px;
-  font-family: "Roboto", sans-serif;
 }
 
 .signupImageContainer {

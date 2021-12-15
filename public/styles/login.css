@@ -13,18 +13,20 @@ main {
 .errorMessage {
   color: #ff6958;
 }
+
 .heroImage {
   font-family: "Allerta Stencil", sans-serif;
   font-size: 120px;
   text-align: center;
   justify-content: center;
-  margin: 50px 20px 5px 20px;
+  margin: 50px 20px 18px 19px;
   align-items: center;
   padding: 5vw;
 }
 
 .appSuperDuperCatchySlogan {
-  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
   position: relative;
   bottom: 38px;
   left: 4px;
@@ -56,11 +58,6 @@ main {
 
 .btn:active {
   transform: scaleY(0.98);
-}
-
-.text {
-  margin-top: 7px;
-  color: #f8ede4;
 }
 
 .btn {
