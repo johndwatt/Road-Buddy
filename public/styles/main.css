@@ -3,3 +3,13 @@
 * {
   box-sizing: border-box;
 }
+
+.footerIconsContainer {
+  background-color: #96c4c5;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+.fas {
+  color: #144d53;
+}
