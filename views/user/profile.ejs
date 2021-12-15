@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/styles/profile.css" />
   </head>
   <body>
-    <header>
       <section>
         <div class="imageContainer">
           <img class="profileImage" src="<%= thisUser.avatar %>" alt="" />
@@ -54,9 +53,8 @@
           <% } %>
         </div>
       </section>
-    </header>
+    <footer>
+      <%- include('../partials/_navbar') %>
+    </footer>
   </body>
-  <footer>
-    <%- include('../partials/_navbar') %>
-  </footer>
 </html>
