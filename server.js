@@ -42,6 +42,10 @@ app.use("/", routes.profile);
 app.use("/matches", routes.match);
 app.use("/", routes.conversation);
 
+app.get("/*", function (req, res, next) {
+    res.render("404");
+});
+
 // Bind Server to PORT
 app.listen(PORT, () => {
     console.log(`Server is live on port ${PORT}!`);
