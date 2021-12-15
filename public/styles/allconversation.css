@@ -1,0 +1,22 @@
+body {
+    background: #001D22;
+}
+
+.conversation_name{
+    color: #F8EDE4;
+    text-align: center;
+}
+
+.imageContainer {
+    border-radius: 30px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #F8EDE4;
+    align-items: center;
+}
+  
+.profileImage {
+    border-radius: 45px;
+    width: 50%;
+}
