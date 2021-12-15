@@ -1,0 +1,23 @@
+body{
+    background-color: #001D22;
+    color: #ffffff;
+}
+section{
+    padding: 35px;
+    text-align: center;
+}
+
+p{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.buttons {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ff6958;
+    color: #000;
+    border: solid transparent 1px;
+    /* margin-top: 10vh; */
+}
