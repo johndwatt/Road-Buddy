@@ -18,6 +18,7 @@
         <div class="profileContents">
           <div class="title">Username</div>
           <input
+            class="input"
             type="text"
             name="username"
             value="<%= userToEdit.username %>"
@@ -26,6 +27,7 @@
           <div>
             <div class="title">Email</div>
             <input
+              class="input"
               type="email"
               name="email"
               value="<%= userToEdit.email %>"
@@ -33,15 +35,17 @@
             />
             <div class="title">Bio</div>
             <textarea
+              class="input"
               name="about"
               rows="4" 
               cols="30"><%= userToEdit.about %>
             </textarea>
           </div>
           <div class="title">Avatar</div>
-          <input type="text" name="avatar" value="<%= userToEdit.avatar %>" />
+          <input class="input" type="text" name="avatar" value="<%= userToEdit.avatar %>" />
           <div class="title">Interests</div>
           <input
+            class="input"
             type="textarea"
             name="interests"
             value="<%= userToEdit.interests %>"
@@ -51,7 +55,7 @@
         <div class="editButtonContainer">
           <% if (user.id === userToEdit.id) { %>
           <a href="/profile/<%= userToEdit.id %>/edit">
-            <button>Update profile</button></a
+            <button class="buttons">Update profile</button></a
           >
           <% } %>
         </div>
