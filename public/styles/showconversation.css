@@ -14,14 +14,27 @@ body {
 }
 
 .sender_message{
-    color: #F8EDE4;
+    color: black;
     background-color: #96C4C5;
     margin-bottom: .5rem;
     border-radius: 15px;
+    text-align: end;
 }
 
 .receiver_message{
     color: #F8EDE4;
-    background-color: aqua;
+    background-color: #144D53;
     border-radius: 15px;
+    margin-bottom: .5rem;
+    text-align: left;
+}
+
+.message__button{
+    border-radius: 15px;
+    background-color: #FF6958;
+    color:black;
+}
+
+a{
+    text-decoration: none;
 }
