@@ -25,7 +25,7 @@ const allConversationsShow = async function (req, res, next) {
             userConversations: userConversations,
             conversations: foundAllConversations,
         }
-
+        console.log(context)
         res.render("conversation/all", context);
     } catch (error) {
         console.log(error);

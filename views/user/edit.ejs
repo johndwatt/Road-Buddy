@@ -32,12 +32,11 @@
               required
             />
             <div class="title">Bio</div>
-            <input
-              type="bio"
-              name="bio"
-              value="<%= userToEdit.bio %>"
-              required
-            />
+            <textarea
+              name="about"
+              rows="4" 
+              cols="30"><%= userToEdit.about %>
+            </textarea>
           </div>
           <div class="title">Avatar</div>
           <input type="text" name="avatar" value="<%= userToEdit.avatar %>" />

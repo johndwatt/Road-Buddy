@@ -6,7 +6,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="/styles/profile.css" />
+    <link rel="stylesheet" href="/styles/profileInterests.css" />
   </head>
   <body>
     <header>
@@ -26,24 +28,27 @@
           <div class="buttonContainer">
             <a
               href="/profile/<%=thisUser.id%>"
-              class="btn btn-primary active"
-              autocomplete="off"
-              aria-pressed="true"
+              class="btn btn-primary"
+              autocomplete="off" 
             >
               About
             </a>
             <a
               href="/profile/<%=thisUser.id%>/interests"
-              class="btn btn-primary"
+              class="btn btn-primary active"
               autocomplete="off"
+              aria-pressed="true"
             >
               Interest
             </a>
           </div>
-          <div class="bioContainer">
-            <p class="bio">
-              <%= thisUser.about %>
-            </p>
+          <div class="interests-container">
+            <% for(let j = 0; j < thisUser.interests.length; j++) { %>
+                <div class="interest-item">
+                    <span><%= thisUser.interests[j] %></span>
+               </div>
+                
+          <% } %>
           </div>
         </div>
         <div class="editButtonContainer">

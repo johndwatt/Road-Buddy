@@ -5,9 +5,9 @@
         <title>
             New Message
         </title>
+        <link rel="stylesheet" href="/styles/profile.css" />
     </head>
     <body>
-        <%- include('../partials/_navbar') %>
         <div>
             <div style="height:30vh">
                 <h1 >Send a Message to <%= receiver.username %> </h1>
@@ -33,4 +33,7 @@
             </div>
         </div>
     </body>
+    <footer>
+        <%- include('../partials/_navbar') %>
+    </footer>
 </html>
