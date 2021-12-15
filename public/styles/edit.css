@@ -1,0 +1,27 @@
+.imageContainer {
+  border-radius: 30px;
+  width: 100vw;
+}
+
+.profileImage {
+  border-radius: 45px;
+  padding: 40px 40px 0px 40px;
+  width: 100%;
+}
+
+.profileContents {
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.profileContents .title {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.editButtonContainer {
+  display: grid;
+  justify-content: center;
+  margin: 20px;
+}

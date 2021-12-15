@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <%- include('../partials/_head') %>
-</head>
-<body>
-    <%- include('../partials/_navbar') %>
+
+    <link rel="stylesheet" href="/styles/edit.css" />
+  </head>
+  <body>
     <main>
-        <section>
-            <h2>Edit My User Profile</h2>
-            <form action="/profile/<%= userToEdit.id %>?_method=PUT" method="POST">
-                <% if (typeof error !== "undefined") { %>
-                    <p><%= error.message %></p> 
-                <% } %>
-                <div>
-                    <label>Username</label>
-                    <input
-                    type="text"
-                    name="username"
-                    value="<%= userToEdit.username %>"
-                    required
-                    />
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input
-                    type="email"
-                    name="email"
-                    value="<%= userToEdit.email %>"
-                    required
-                    />
-                </div>
-                <div>
-                    <label>Avatar</label>
-                    <input
-                    type="text"
-                    name="avatar"
-                    value="<%= userToEdit.avatar %>"
-                    />
-                </div>
-                <div>
-                    <label>Interests</label>
-                    <input
-                    type="text"
-                    name="interests"
-                    value="<%= userToEdit.interests %>"
-                    />
-                </div>
-                <div>
-                    <button type="submit">Confirm Edits</button>
-                    <a href="/profile/<%= userToEdit.id %>">Cancel</a>
-                </div>
-                
-            </form>
-        </section>
+      <section>
+        <form action="/profile/<%= userToEdit.id %>?_method=PUT" method="POST">
+            <% if (typeof error !== "undefined") { %>
+                <p><%= error.message %></p> 
+            <% } %>
+        <div class="imageContainer">
+          <img class="profileImage" src="<%= userToEdit.avatar %>" alt="" />
+        </div>
+        <div class="profileContents">
+          <div class="title">Username</div>
+          <input
+            type="text"
+            name="username"
+            value="<%= userToEdit.username %>"
+            required
+          />
+          <div>
+            <div class="title">Email</div>
+            <input
+              type="email"
+              name="email"
+              value="<%= userToEdit.email %>"
+              required
+            />
+            <div class="title">Bio</div>
+            <input
+              type="bio"
+              name="bio"
+              value="<%= userToEdit.bio %>"
+              required
+            />
+          </div>
+          <div class="title">Avatar</div>
+          <input type="text" name="avatar" value="<%= userToEdit.avatar %>" />
+          <div class="title">Interests</div>
+          <input
+            type="textarea"
+            name="interests"
+            value="<%= userToEdit.interests %>"
+          />
+        </div>
+
+        <div class="editButtonContainer">
+          <% if (user.id === userToEdit.id) { %>
+          <a href="/profile/<%= userToEdit.id %>/edit">
+            <button>Update profile</button></a
+          >
+          <% } %>
+        </div>
+      </section>
+      </form>
     </main>
-</body>
+  </body>
 </html>
