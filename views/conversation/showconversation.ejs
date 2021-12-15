@@ -21,7 +21,7 @@
                     <% for(let i=0;i<allMessages.length;i++) { %>
                         <% if (allMessages[i].sender==currentUser.id) { %>
                             <div class="sender_message">
-                                <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %>
+                                <!-- <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %> -->
                                     <a href="/profile/<%= user.id %>">
                                         <%= currentUser.username %>
                                     </a>
@@ -33,7 +33,7 @@
                                                     <img class="userImage" src="<%= otherUser.avatar %> " alt=""
                                                         srcset="">
                                                 </a>
-                                                <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %>
+                                                <!-- <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %> -->
                                                     <a href="/profile/<%= otherUser.id %> ">
                                                         <%= otherUser.username %>
                                                     </a>
@@ -41,7 +41,7 @@
                                                         <% } %>
                                             </div>
                                             <% } %>
-                                                <div>
+                                                <div id="form__box__container">
                                                     <form action="/message/new/<%=otherUser.id%>"
                                                         method="POST" id="form__box">
                                                         <% if (typeof error !=='undefined' ) { %>
@@ -61,7 +61,6 @@
                                                                     <button class="message__button py-2 px-3">Send
                                                                     </button>
                                                                 </div>
-
                                                     </form>
                                                 </div>
                             </div>
@@ -72,3 +71,7 @@
         <%- include('../partials/_navbar') %>
     </footer>
 </html>
+
+<script>
+    $(".messages_container").scrollTop($(".messages_container")[0].scrollHeight);
+</script>

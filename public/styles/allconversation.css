@@ -5,6 +5,11 @@ body {
 .conversation_name{
     color: #F8EDE4;
     text-align: center;
+    margin: 2vh 0 2vh 0;
+}
+.username{
+    color: black;
+    font-weight: 600;
 }
 .users_container{
     display:grid;
