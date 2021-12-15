@@ -10,6 +10,9 @@ main {
   margin: 0;
 }
 
+.errorMessage {
+  color: #ff6958;
+}
 .heroImage {
   font-family: "Allerta Stencil", sans-serif;
   font-size: 120px;
