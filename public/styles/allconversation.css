@@ -6,20 +6,28 @@ body {
     color: #F8EDE4;
     text-align: center;
 }
-
+.users_container{
+    display:grid;
+    align-items: center;
+    justify-items: center;
+}
 .userContainer {
-    border-radius: 30px;
-    width: 100vw;
+    border-radius: 10px;
+    width: 80vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #F8EDE4;
     align-items: center;
-    align-content: space-between;
+    margin-top: 1vh;
+    height:10vh;
 }
   
 .userImage {
-    border-radius: 45px;
+    border-radius: 10px;
     width: 50%;
+    margin-left: 1vw;
+    overflow: hidden;
+    margin-left: 3vw;
 }
 
 .username{
