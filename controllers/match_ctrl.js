@@ -21,7 +21,7 @@ const indexRoute = async function (req, res, next) {
             };
         }
 
-        return res.send(`No one else has this interest`)
+        return res.render("match/nomatches")
     } catch (error){
         console.log(error);
         req.error = error;
