@@ -1,0 +1,26 @@
+.match-section{
+    display: grid;
+    place-items: center;
+}
+
+
+.avatar-image{
+    height: 200px;
+    width: 300px;
+}
+
+button{ 
+    background-color: #FB6959;
+    color: #0E1504;
+}
+
+
+.interest{
+    border: 10px solid crimson;
+}
+
+.done-button{
+    /* display: flex;
+    justify-content: center; */
+    margin-left: 40px;
+}
