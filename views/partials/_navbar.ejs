@@ -1,15 +1,16 @@
 <nav>
-    <div> 
-        <h1><a href="/">Road Buddy</a></h1>
-    </div>
-    <ul>
-        <% if (typeof user !== "undefined") { %> 
-            <li><a href="/profile/<%= user.id %>">My Profile</a></li>
-            <li><a href="/matches">Find A Match</a></li>
-            <li><a href="/logout">Logout</a></li>
+    <div class="footerContainer">
+        <div class="footerIconsContainer">
+        <% if (typeof user !== "undefined") { %>
+            <!-- <a href=""><i class="fas fa-phone-square-alt fa-2x"></i></a> -->
+            <a href="/matches"><i class="fas fa-search fa-2x"></i></a>
+            <a href="/"><i class="fas fa-truck fa-3x"></i></a>
+            <!-- <i class="fas fa-comment-dots fa-2x"></i> -->
+            <a href="/profile/<%= user.id %>"><i class="fas fa-user-astronaut fa-2x"></i></a>
         <% } else { %> 
-            <li><a href="/signup">Signup</a></li>
-            <li><a href="/login">Login</a></li>
+            <a href="/signup"><i class="fas fa-phone-square-alt fa-2x"></i></a>
+            <a href="/login"><i class="fas fa-comment-dots fa-2x"></i></a>
         <% } %> 
-    </ul>
+        </div>
+      </div>
 </nav>
