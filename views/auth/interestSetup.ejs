@@ -1,40 +1,70 @@
 <!DOCTYPE html>
- <html lang="en">
-   <head>
-     <%- include('../partials/_head') %>
-     <!-- <link rel="stylesheet" href="styles/signup.css" /> -->
-     <link rel="stylesheet" href="styles/interests.css" />
-   </head>
-   <body>
-     <!-- <%- include('../partials/_navbar') %> -->
-     <main>
-        <form action="/interestsetup/<%= currentUser.id %>?_method=PUT" method="POST">
-        <% for(let i = 0; i < categories.length; i++) { %>
+<html lang="en">
+  <head>
+    <%- include('../partials/_head') %>
+
+    <link rel="stylesheet" href="styles/interests.css" />
+  </head>
+  <body>
+    <%- include('../partials/_navbar') %>
+    <main>
+      <div>
+        <div class="titleContainer">
           <div class="interestTitle">
-            <h2><%= categoryNames[i] %> </h2>
+            10-44
           </div>
-            <div id="interestSelect">
-                <% for(let j = 0; j < categories[i].length; j++) { %>
-                  <div id="ck-button">
-                    <label>
-                      <input 
-                        type="checkbox"  
-                        name="interests" 
-                        value="<%=categories[i][j] %>"> 
-                        <span><%= categories[i][j] %></span>
-                      </input>
-                    
-                    </label>
-                 </div>
-                  
-            <% } %>
-            </div>
-         <% } %>
-        <div>
-            <input type="submit">Select Interests</input>
+          <div class="interestSayin">
+            connection recieved
+          </div>
         </div>
-        </form>
-     </main>
-   </body>
- </html>
- 
+
+        
+        <div class="selectTextContainer">
+            <div class="interestTitleContainer">
+            <div class="promptTitle">
+            Select your Interest
+            </div>
+          </div>
+
+          <div class="interestPrompt">
+            <div class="promtText">
+            Let us get to know about the things you like so we can match you with the best possible Road Buddies!
+            </div>
+          </div>
+        </div>
+        </div>
+          
+
+
+        <div class="interestContainer">
+          <form action="/interestsetup/<%= currentUser.id %>?_method=PUT" method="POST">
+          <% for(let i = 0; i < categories.length; i++) { %>
+            <div class="interestTitle">
+              <div class='categoryTitle'><%= categoryNames[i] %> </div>
+            </div>
+              <div id="interestSelect">
+                  <% for(let j = 0; j < categories[i].length; j++) { %>
+                    <div id="ck-button">
+                      <label>
+                        <input 
+                          type="checkbox"  
+                          name="interests" 
+                          value="<%=categories[i][j] %>"> 
+                          <span><%= categories[i][j] %></span>
+                        </input>
+                      
+                      </label>
+                  </div>
+                    
+              <% } %>
+              </div>
+          <% } %>
+          <div>
+              <input type="submit">Select Interests</input>
+          </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
