@@ -38,3 +38,17 @@ body {
 .username{
     font-size: 1.5rem;
 }
+
+.phone_image{
+    width: 25%;
+    margin: 0 1vw 1.5vh 4vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    position: sticky;
+    top: 0;
+}

@@ -27,19 +27,18 @@
                                     </a>
                                     : <%= allMessages[i].text %>
                                         <img class="userImage" src="<%= currentUser.avatar %> " alt="" srcset="">
-                                        <% } else {%>
-                                            <div class="receiver_message">
-                                                <a href="/profile/<%= otherUser.id %> ">
-                                                    <img class="userImage" src="<%= otherUser.avatar %> " alt=""
-                                                        srcset="">
-                                                </a>
-                                                <!-- <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %> -->
-                                                    <a href="/profile/<%= otherUser.id %> ">
-                                                        <%= otherUser.username %>
-                                                    </a>
-                                                    : <%= allMessages[i].text %>
-                                                        <% } %>
-                                            </div>
+                        <% } else {%>
+                            <div class="receiver_message">
+                                <a href="/profile/<%= otherUser.id %> ">
+                                    <img class="userImage" src="<%= otherUser.avatar %> " alt=""srcset="">
+                                </a>
+                                <!-- <%= new Intl.DateTimeFormat('en-US').format(allMessages[i].createdAt) %> -->
+                                <a href="/profile/<%= otherUser.id %> ">
+                                    <%= otherUser.username %>
+                                </a>
+                                : <%= allMessages[i].text %>
+                        <% } %>
+                                    </div>
                                             <% } %>
                                                 <div id="form__box__container">
                                                     <form action="/message/new/<%=otherUser.id%>"
@@ -65,11 +64,12 @@
                                                 </div>
                             </div>
                 </div>
+            <footer>
+                <%- include('../partials/_navbar') %>
+            </footer>
     </body>
 
-    <footer>
-        <%- include('../partials/_navbar') %>
-    </footer>
+
 </html>
 
 <script>
