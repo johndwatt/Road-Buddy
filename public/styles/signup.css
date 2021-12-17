@@ -121,3 +121,29 @@ placeholder {
   margin-top: 20px;
   display: flex;
 }
+
+@media only screen and (max-width: 1500px) {
+  .heroImage {
+    font-family: "Allerta Stencil", sans-serif;
+    font-size: 120px;
+    text-align: center;
+    justify-content: center;
+    margin: -12px 10px 0px 10px;
+    align-items: center;
+  }
+
+  .container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .form-control input {
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
