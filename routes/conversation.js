@@ -8,10 +8,4 @@ router.get("/message/new/:id", controllers.conversation_ctrl.newMessageShow);
 router.post("/message/new/:id", controllers.conversation_ctrl.newMessagePost);
 router.get("/:id", controllers.conversation_ctrl.singleConversationShow);
 
-
-// router.get("/conversation", controllers.conversation_ctrl.allConversationsShow);
-// router.get("/conversation/message/new/:id", controllers.conversation_ctrl.newMessageShow);
-// router.post("/conversation/message/new/:id", controllers.conversation_ctrl.newMessagePost);
-// router.get("/conversation/:id", controllers.conversation_ctrl.singleConversationShow);
-
 module.exports = router;
